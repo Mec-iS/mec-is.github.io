@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html prefix="
+og: http://ogp.me/ns#
+article: http://ogp.me/ns/article#
+" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Markdown TEST | PYhummus</title>
+<link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
+<link rel="canonical" href="https://example.com/posts/markdown-test/">
+<!--[if lt IE 9]><script src="/assets/js/html5.js"></script><![endif]--><meta name="author" content="@lorenzogotuned">
+<meta property="og:site_name" content="PYhummus">
+<meta property="og:title" content="Markdown TEST">
+<meta property="og:url" content="https://example.com/posts/markdown-test/">
+<meta property="og:description" content="Python Decorators (Classes over Functions?)
+Taken From Bruce Eckel's Blog. 
+ All rights reserved http://bruceeckel.github.io
+
+
+NOTE: the Author states that using classes as decorators instead of funct">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2015-07-21T20:19:22+02:00">
+<meta property="article:tag" content="Decorators">
+<meta property="article:tag" content="Functional">
+<meta property="article:tag" content="Python">
+</head>
+<body>
+    <section class="social"><ul>
+<li><a href="../../index.html" title="Home"><i class="icon-home"></i></a></li>
+            <li><a href="../../archive.html" title="Archives"><i class="icon-folder-open-alt"></i></a></li>
+            <li><a href="../../categories/index.html" title="Tags"><i class="icon-tags"></i></a></li>
+            <li><a href="../../rss.xml" title="RSS"><i class="icon-rss"></i></a></li>
+            <li><a href="https://getnikola.com" title="About me"><i class="icon-user"></i></a></li>
+            <li><a href="https://twitter.com/getnikola" title="My Twitter"><i class="icon-twitter"></i></a></li>
+            <li><a href="https://github.com/getnikola" title="My Github"><i class="icon-github"></i></a></li>
+
+        <li>        <footer id="footer" role="contentinfo"><p>2015 Contents collected and organized by         <a href="mailto:tunedconsulting@gmail.com">@lorenzogotuned</a>   Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>      This material has been collected for learning purposes only and no commercial use. All rights reserved to sources.</p>
+            
+        </footer>
+</li>
+        </ul></section><section class="page-content"><div class="content" rel="main">
+    <div class="post">
+        <h1 class="p-name entry-title" itemprop="headline name">Markdown TEST</h1>
+
+        <div class="meta">
+            <div class="authordate">
+                <time class="timeago" datetime="2015-07-21T20:19:22+02:00">2015-07-21 20:19</time>
+            
+                      |  
+        <a href="index.md" id="sourcelink">Source</a>
+
+            </div>
+                    <div itemprop="keywords" class="tags">
+        <ul>
+        Tags : 
+           <li><a class="tag p-category" href="../../categories/decorators/" rel="tag">Decorators</a></li>
+           <li><a class="tag p-category" href="../../categories/functional/" rel="tag">Functional</a></li>
+           <li><a class="tag p-category" href="../../categories/python/" rel="tag">Python</a></li>
+        </ul>
+</div>
+
+        </div>
+        <div class="body">
+            <div>
+<h2>Python Decorators (Classes over Functions?)</h2>
+<p>Taken From Bruce Eckel's Blog. 
+ All rights reserved http://bruceeckel.github.io
+<br><br>
+NOTE: the Author states that using classes as decorators instead of functions improve readability and code refactoring, and also conceptually it is a much better solution in his opinion. I think it can be a good practice, I would like to know what a functional programmer thinks about.
+<br></p>
+<h3>Starting example</h3>
+<p>"The only constraint upon the object returned by the decorator is that it can be used as a function -- which basically means it must be callable. Thus, any classes we use as decorators must implement <code>__call__</code>."
+<br><br></p>
+<pre class="code literal-block"><span class="kr">class</span> <span class="nx">myDecorator</span><span class="p">(</span><span class="nx">object</span><span class="p">)</span><span class="o">:</span>
+    <span class="s1">'''</span>
+<span class="s1">    Typically, you'</span><span class="nx">ll</span> <span class="nx">capture</span> <span class="nx">the</span> <span class="kd">function</span> <span class="nx">object</span> <span class="k">in</span> <span class="nx">the</span> <span class="nx">constructor</span> <span class="nx">and</span> <span class="nx">later</span> <span class="nx">use</span> <span class="nx">it</span> <span class="k">in</span> <span class="nx">the</span> <span class="nx">__call__</span><span class="p">()</span> <span class="nx">method</span>
+    <span class="s1">''</span><span class="err">'</span>
+    <span class="nx">def</span> <span class="nx">__init__</span><span class="p">(</span><span class="nx">self</span><span class="p">,</span> <span class="nx">f</span><span class="p">)</span><span class="o">:</span>
+        <span class="nx">print</span><span class="p">(</span><span class="s2">"inside myDecorator.__init__()"</span><span class="p">)</span>
+        <span class="nx">f</span><span class="p">()</span> <span class="err">#</span> <span class="nx">Prove</span> <span class="nx">that</span> <span class="kd">function</span> <span class="nx">definition</span> <span class="nx">has</span> <span class="nx">completed</span>
+
+    <span class="nx">def</span> <span class="nx">__call__</span><span class="p">(</span><span class="nx">self</span><span class="p">)</span><span class="o">:</span>
+        <span class="nx">print</span><span class="p">(</span><span class="s2">"inside myDecorator.__call__()"</span><span class="p">)</span>
+
+<span class="err">@</span><span class="nx">myDecorator</span>
+<span class="nx">def</span> <span class="nx">aFunction</span><span class="p">()</span><span class="o">:</span>
+    <span class="nx">print</span><span class="p">(</span><span class="s2">"inside aFunction()"</span><span class="p">)</span>
+
+<span class="nx">print</span><span class="p">(</span><span class="s2">"Finished decorating aFunction()"</span><span class="p">)</span>
+
+<span class="nx">aFunction</span><span class="p">()</span>
+
+
+<span class="nx">inside</span> <span class="nx">myDecorator</span><span class="p">.</span><span class="nx">__init__</span><span class="p">()</span>
+<span class="nx">inside</span> <span class="nx">aFunction</span><span class="p">()</span>
+<span class="nx">Finished</span> <span class="nx">decorating</span> <span class="nx">aFunction</span><span class="p">()</span>
+<span class="nx">inside</span> <span class="nx">myDecorator</span><span class="p">.</span><span class="nx">__call__</span><span class="p">()</span>
+</pre>
+
+
+<p><br><br>
+"When <code>aFunction()</code> is called after it has been decorated, we get completely different behavior; the <code>myDecorator.__call__()</code> method is called instead of the original code. That's because the act of decoration replaces the original function object with the result of the decoration -- in our case, the myDecorator object replaces <code>aFunction</code>."
+<br><br></p>
+<pre class="code literal-block"><span class="err">#</span> <span class="nx">Very</span> <span class="nx">basic</span> <span class="nx">example</span> <span class="kd">with</span> <span class="nx">Class</span>
+
+<span class="kr">class</span> <span class="nx">entryExit</span><span class="p">(</span><span class="nx">object</span><span class="p">)</span><span class="o">:</span>
+
+    <span class="nx">def</span> <span class="nx">__init__</span><span class="p">(</span><span class="nx">self</span><span class="p">,</span> <span class="nx">f</span><span class="p">)</span><span class="o">:</span>
+        <span class="nx">self</span><span class="p">.</span><span class="nx">f</span> <span class="o">=</span> <span class="nx">f</span>
+
+    <span class="nx">def</span> <span class="nx">__call__</span><span class="p">(</span><span class="nx">self</span><span class="p">)</span><span class="o">:</span>
+        <span class="nx">print</span><span class="p">(</span><span class="s2">"Entering"</span><span class="p">,</span> <span class="nx">self</span><span class="p">.</span><span class="nx">f</span><span class="p">.</span><span class="nx">__name__</span><span class="p">)</span>
+        <span class="nx">self</span><span class="p">.</span><span class="nx">f</span><span class="p">()</span>
+        <span class="nx">print</span><span class="p">(</span><span class="s2">"Exited"</span><span class="p">,</span> <span class="nx">self</span><span class="p">.</span><span class="nx">f</span><span class="p">.</span><span class="nx">__name__</span><span class="p">)</span>
+
+<span class="err">@</span><span class="nx">entryExit</span>
+<span class="nx">def</span> <span class="nx">func1</span><span class="p">()</span><span class="o">:</span>
+    <span class="nx">print</span><span class="p">(</span><span class="s2">"inside func1()"</span><span class="p">)</span>
+
+<span class="err">@</span><span class="nx">entryExit</span>
+<span class="nx">def</span> <span class="nx">func2</span><span class="p">()</span><span class="o">:</span>
+    <span class="nx">print</span><span class="p">(</span><span class="s2">"inside func2()"</span><span class="p">)</span>
+
+<span class="nx">func1</span><span class="p">()</span>
+<span class="nx">func2</span><span class="p">()</span>
+
+<span class="nx">Entering</span> <span class="nx">func1</span>
+<span class="nx">inside</span> <span class="nx">func1</span><span class="p">()</span>
+<span class="nx">Exited</span> <span class="nx">func1</span>
+<span class="nx">Entering</span> <span class="nx">func2</span>
+<span class="nx">inside</span> <span class="nx">func2</span><span class="p">()</span>
+<span class="nx">Exited</span> <span class="nx">func2</span>
+
+
+
+<span class="err">#</span> <span class="nx">Turned</span> <span class="nx">into</span> <span class="nx">a</span> <span class="nb">Function</span>
+
+<span class="nx">def</span> <span class="nx">entryExit</span><span class="p">(</span><span class="nx">f</span><span class="p">)</span><span class="o">:</span>
+    <span class="nx">def</span> <span class="nx">new_f</span><span class="p">()</span><span class="o">:</span> 
+        <span class="s2">""" Wrapping functio, closure """</span>
+        <span class="nx">print</span><span class="p">(</span><span class="s2">"Entering"</span><span class="p">,</span> <span class="nx">f</span><span class="p">.</span><span class="nx">__name__</span><span class="p">)</span>
+        <span class="nx">f</span><span class="p">()</span>
+        <span class="nx">print</span><span class="p">(</span><span class="s2">"Exited"</span><span class="p">,</span> <span class="nx">f</span><span class="p">.</span><span class="nx">__name__</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nx">new_f</span>
+
+<span class="err">@</span><span class="nx">entryExit</span>
+<span class="nx">def</span> <span class="nx">func1</span><span class="p">()</span><span class="o">:</span>
+    <span class="nx">print</span><span class="p">(</span><span class="s2">"inside func1()"</span><span class="p">)</span>
+
+<span class="err">@</span><span class="nx">entryExit</span>
+<span class="nx">def</span> <span class="nx">func2</span><span class="p">()</span><span class="o">:</span>
+    <span class="nx">print</span><span class="p">(</span><span class="s2">"inside func2()"</span><span class="p">)</span>
+
+<span class="nx">func1</span><span class="p">()</span>
+<span class="nx">func2</span><span class="p">()</span>
+<span class="nx">print</span><span class="p">(</span><span class="nx">func1</span><span class="p">.</span><span class="nx">__name__</span><span class="p">)</span>  <span class="err">#</span> <span class="nx">it</span> <span class="nx">prints</span> <span class="nx">the</span> <span class="nx">name</span> <span class="nx">of</span> <span class="nx">the</span> <span class="nx">closure</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">to</span> <span class="nx">correct</span> <span class="k">this</span> <span class="nx">you</span> <span class="nx">can</span> <span class="nx">use</span> <span class="err">@</span><span class="nx">wraps</span> <span class="nx">from</span> <span class="nx">functools</span> <span class="nx">library</span><span class="p">)</span>
+
+<span class="nx">Entering</span> <span class="nx">func1</span>
+<span class="nx">inside</span> <span class="nx">func1</span><span class="p">()</span>
+<span class="nx">Exited</span> <span class="nx">func1</span>
+<span class="nx">Entering</span> <span class="nx">func2</span>
+<span class="nx">inside</span> <span class="nx">func2</span><span class="p">()</span>
+<span class="nx">Exited</span> <span class="nx">func2</span>
+<span class="nx">new_f</span>
+</pre>
+
+
+<p><br><br></p>
+<h2>Decorators with arguments</h2>
+<p>"Without arguments the function to be decorated is passed to the constructor, and the <code>__call__()</code> method is called whenever the decorated function is invoked."
+<br><br></p>
+<pre class="code literal-block"><span class="err">#</span> <span class="nx">see</span> <span class="nx">what</span> <span class="nx">happens</span> <span class="nx">when</span> <span class="nx">we</span> <span class="nx">add</span> <span class="nx">arguments</span> <span class="nx">to</span> <span class="nx">the</span> <span class="nx">decorator</span><span class="o">:</span>
+
+<span class="kr">class</span> <span class="nx">decoratorWithArguments</span><span class="p">(</span><span class="nx">object</span><span class="p">)</span><span class="o">:</span>
+
+    <span class="nx">def</span> <span class="nx">__init__</span><span class="p">(</span><span class="nx">self</span><span class="p">,</span> <span class="nx">arg1</span><span class="p">,</span> <span class="nx">arg2</span><span class="p">,</span> <span class="nx">arg3</span><span class="p">)</span><span class="o">:</span>
+        <span class="s2">"""</span>
+<span class="s2">        If there are decorator arguments, the function</span>
+<span class="s2">        to be decorated is not passed to the constructor!</span>
+<span class="s2">        """</span>
+        <span class="nx">print</span><span class="p">(</span><span class="s2">"Inside __init__()"</span><span class="p">)</span>
+        <span class="nx">self</span><span class="p">.</span><span class="nx">arg1</span> <span class="o">=</span> <span class="nx">arg1</span>
+        <span class="nx">self</span><span class="p">.</span><span class="nx">arg2</span> <span class="o">=</span> <span class="nx">arg2</span>
+        <span class="nx">self</span><span class="p">.</span><span class="nx">arg3</span> <span class="o">=</span> <span class="nx">arg3</span>
+
+    <span class="nx">def</span> <span class="nx">__call__</span><span class="p">(</span><span class="nx">self</span><span class="p">,</span> <span class="nx">f</span><span class="p">)</span><span class="o">:</span>
+        <span class="s2">"""</span>
+<span class="s2">        If there are decorator arguments, __call__() is only called</span>
+<span class="s2">        once, as part of the decoration process! You can only give</span>
+<span class="s2">        it a single argument, which is the function object.</span>
+<span class="s2">        """</span>
+        <span class="nx">print</span><span class="p">(</span><span class="s2">"Inside __call__()"</span><span class="p">)</span>
+        <span class="nx">def</span> <span class="nx">wrapped_f</span><span class="p">(</span><span class="o">*</span><span class="nx">args</span><span class="p">)</span><span class="o">:</span> <span class="err">#</span> <span class="nx">closure</span> <span class="nx">that</span> <span class="nx">takes</span> <span class="nx">decorators</span><span class="s1">' arguments</span>
+<span class="s1">            print("Inside wrapped_f()")</span>
+<span class="s1">            print("Decorator arguments:", self.arg1, self.arg2, self.arg3)</span>
+<span class="s1">            f(*args)</span>
+<span class="s1">            print("After f(*args)")</span>
+<span class="s1">        return wrapped_f # .__call__ returns the closure</span>
+
+<span class="s1">@decoratorWithArguments("hello", "world", 42)  # arguments passed to the decorator</span>
+<span class="s1">def sayHello(a1, a2, a3, a4):</span>
+<span class="s1">    print('</span><span class="nx">sayHello</span> <span class="nx">arguments</span><span class="o">:</span><span class="err">'</span><span class="p">,</span> <span class="nx">a1</span><span class="p">,</span> <span class="nx">a2</span><span class="p">,</span> <span class="nx">a3</span><span class="p">,</span> <span class="nx">a4</span><span class="p">)</span>
+
+<span class="nx">print</span><span class="p">(</span><span class="s2">"After decoration"</span><span class="p">)</span>
+
+<span class="nx">print</span><span class="p">(</span><span class="s2">"Preparing to call sayHello()"</span><span class="p">)</span>
+<span class="nx">sayHello</span><span class="p">(</span><span class="s2">"say"</span><span class="p">,</span> <span class="s2">"hello"</span><span class="p">,</span> <span class="s2">"argument"</span><span class="p">,</span> <span class="s2">"list"</span><span class="p">)</span>
+<span class="nx">print</span><span class="p">(</span><span class="s2">"after first sayHello() call"</span><span class="p">)</span>
+<span class="nx">sayHello</span><span class="p">(</span><span class="s2">"a"</span><span class="p">,</span> <span class="s2">"different"</span><span class="p">,</span> <span class="s2">"set of"</span><span class="p">,</span> <span class="s2">"arguments"</span><span class="p">)</span>
+<span class="nx">print</span><span class="p">(</span><span class="s2">"after second sayHello() call"</span><span class="p">)</span>
+
+<span class="nx">Inside</span> <span class="nx">__init__</span><span class="p">()</span>
+<span class="nx">Inside</span> <span class="nx">__call__</span><span class="p">()</span>
+<span class="nx">After</span> <span class="nx">decoration</span>
+<span class="nx">Preparing</span> <span class="nx">to</span> <span class="nx">call</span> <span class="nx">sayHello</span><span class="p">()</span>
+<span class="nx">Inside</span> <span class="nx">wrapped_f</span><span class="p">()</span>
+<span class="nx">Decorator</span> <span class="nx">arguments</span><span class="o">:</span> <span class="nx">hello</span> <span class="nx">world</span> <span class="mi">42</span>
+<span class="nx">sayHello</span> <span class="nx">arguments</span><span class="o">:</span> <span class="nx">say</span> <span class="nx">hello</span> <span class="nx">argument</span> <span class="nx">list</span>
+<span class="nx">After</span> <span class="nx">f</span><span class="p">(</span><span class="o">*</span><span class="nx">args</span><span class="p">)</span>
+<span class="nx">after</span> <span class="nx">first</span> <span class="nx">sayHello</span><span class="p">()</span> <span class="nx">call</span>
+<span class="nx">Inside</span> <span class="nx">wrapped_f</span><span class="p">()</span>
+<span class="nx">Decorator</span> <span class="nx">arguments</span><span class="o">:</span> <span class="nx">hello</span> <span class="nx">world</span> <span class="mi">42</span>
+<span class="nx">sayHello</span> <span class="nx">arguments</span><span class="o">:</span> <span class="nx">a</span> <span class="nx">different</span> <span class="nx">set</span> <span class="nx">of</span> <span class="nx">arguments</span>
+<span class="nx">After</span> <span class="nx">f</span><span class="p">(</span><span class="o">*</span><span class="nx">args</span><span class="p">)</span>
+<span class="nx">after</span> <span class="nx">second</span> <span class="nx">sayHello</span><span class="p">()</span> <span class="nx">call</span>
+</pre>
+
+
+<p><br><br>
+NOTE: instead of using <code>.__call__</code> to run the decorated function, "you must it to perform the decoration -- it is nonetheless surprising the first time you see it because it's acting so much differently than the no-argument case, and you must code the decorator very differently from the no-argument case."
+<br><br></p>
+</div>
+        </div>
+                <ul class="pager hidden-print">
+<li class="previous">
+                <a href="../test/" rel="prev" title="Test">Previous post</a>
+            </li>
+        </ul>
+</div>
+            
+        </div>
+    </section><script src="../../assets/js/all-nocdn.js" type="text/javascript"></script><script type="text/javascript">
+            $(function(){
+                $('.timeago').timeago();
+            });
+        </script>
+</body>
+</html>
