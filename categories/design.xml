@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>PYhummus (Design)</title><link>https://example.com/</link><description></description><atom:link type="application/rss+xml" rel="self" href="https://example.com/categories/design.xml"></atom:link><language>en</language><lastBuildDate>Tue, 21 Jul 2015 21:13:49 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Python Programs Design</title><link>https://example.com/posts/python-programs-design/</link><dc:creator>lorenzogotuned</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
+    &lt;div class="container" id="notebook-container"&gt;
+
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="Python-Programs-Design"&gt;Python Programs Design&lt;a class="anchor-link" href="https://example.com/posts/python-programs-design/#Python-Programs-Design"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Inspired by Peter Norvig's course at Udacity&lt;br&gt;
+ &lt;a href="https://www.udacity.com/course/design-of-computer-programs--cs212"&gt;https://www.udacity.com/course/design-of-computer-programs--cs212&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="Workflow"&gt;Workflow&lt;a class="anchor-link" href="https://example.com/posts/python-programs-design/#Workflow"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;??&lt;/strong&gt;   &amp;gt;   &lt;strong&gt;problem&lt;/strong&gt;      &amp;gt;      &lt;strong&gt;spec&lt;/strong&gt;      &amp;gt;      &lt;strong&gt;code&lt;/strong&gt;&lt;br&gt;
+ &lt;em&gt;understand&lt;/em&gt;        &lt;em&gt;specify&lt;/em&gt;             &lt;em&gt;design&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Starting from a relative understanding of a problem/task we &lt;em&gt;specify&lt;/em&gt; how things work in the domain of the problem, to &lt;em&gt;design&lt;/em&gt; code that solve the problem or realize the task&lt;/p&gt;
+&lt;h4 id="Barebone"&gt;Barebone&lt;a class="anchor-link" href="https://example.com/posts/python-programs-design/#Barebone"&gt;¶&lt;/a&gt;&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;Explain to yourself and in a team the task/problem&lt;/li&gt;
+&lt;li&gt;Reach a written/unformal specification of the task, defining sequential sub-tasks or complementary functions to solve the problem&lt;/li&gt;
+&lt;li&gt;Design your code to solve tasks and sub-tasks, minding best practices (or design patterns)&lt;/li&gt;
+&lt;li&gt;Code&lt;/li&gt;
+&lt;li&gt;Iterate with adjustments and tests&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id="Code"&gt;Code&lt;a class="anchor-link" href="https://example.com/posts/python-programs-design/#Code"&gt;¶&lt;/a&gt;&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;write down a function name that realize a sub-task&lt;/li&gt;
+&lt;li&gt;write the docstring for the function&lt;/li&gt;
+&lt;li&gt;find the best built-in functions or libraries to realize the task in the function (forget optimization for now, try to be idiomatic and use the fittest tools)&lt;/li&gt;
+&lt;li&gt;write different functions depending on your style (functional, object oriented)&lt;/li&gt;
+&lt;li&gt;Accomplish the task by defining a "main" script that uses the functions&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id="Example"&gt;Example&lt;a class="anchor-link" href="https://example.com/posts/python-programs-design/#Example"&gt;¶&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;We are going to use the example of simulating a Poker game as a playground for a program design:&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [5]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;poker&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;hands&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;                   &lt;span class="c"&gt;# function name&lt;/span&gt;
+    &lt;span class="sd"&gt;""" Return the best hand: poker([hand, ..]) =&amp;gt; hand """&lt;/span&gt;  &lt;span class="c"&gt;# docstring&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nb"&gt;max&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;                    &lt;span class="c"&gt;# the fittest function to return the maximum value in Python is max()&lt;/span&gt;
+
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;max&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]))&lt;/span&gt;            &lt;span class="c"&gt;# study from the documentation the behaviour of the function&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;max&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;key&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;abs&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;  &lt;span class="c"&gt;# https://docs.python.org/3.3/library/functions.html#max&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+
+
+&lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
+&lt;div class="output_subarea output_stream output_stdout output_text"&gt;
+&lt;pre&gt;5
+-5
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;&lt;strong&gt;A program is a set of functions, classes and operations working to solve/realize the same problem/task&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;NOTE: Python3 basic built-ins &lt;a href="https://docs.python.org/3.3/library/functions.html"&gt;https://docs.python.org/3.3/library/functions.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h4 id="Best-use-of-Python-design-principles"&gt;Best use of Python design principles&lt;a class="anchor-link" href="https://example.com/posts/python-programs-design/#Best-use-of-Python-design-principles"&gt;¶&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;Going on we will get familiar with Python design principles and we will know how to use the tools the language provides. Let's see how it is possible by introducing in our design a function to define ranks for hands in a poker game.&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [1]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;hand_rank&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;hand&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="sd"&gt;""" Return the rank("point") of an hand: hand =&amp;gt; rank according to poker rules &lt;/span&gt;
+&lt;span class="sd"&gt;    ranks = { nothing: 0, pair: 1, double pair: 2, ..., flush: x, four of a kind: y, ... } """&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="k"&gt;None&lt;/span&gt; &lt;span class="c"&gt;# by now it is not implemented&lt;/span&gt;
+
+&lt;span class="c"&gt;# How can we return the hand with the best ranking from a list of hands &lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;poker&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;hands&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;                   
+    &lt;span class="sd"&gt;""" Return the best hand: [hand, ..] =&amp;gt; hand """&lt;/span&gt; 
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nb"&gt;max&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;hands&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;key&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;hand_rank&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c"&gt;# use of a custom function as a key for max()&lt;/span&gt;
+
+&lt;span class="c"&gt;# If we use the 'key' argument in max() we can find the max value coming out from the hand_rank()&lt;/span&gt;
+&lt;span class="c"&gt;# this is an example of how a Python function fits perfectly to solve a sub-task for our problem.&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [ ]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span class="c"&gt;# https://github.com/faif/python-patterns&lt;/span&gt;
+&lt;span class="c"&gt;# https://github.com/davidcorne/Design-Patterns-In-Python&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+</description><category>Design</category><category>Python</category><guid>https://example.com/posts/python-programs-design/</guid><pubDate>Tue, 21 Jul 2015 20:41:44 GMT</pubDate></item></channel></rss>

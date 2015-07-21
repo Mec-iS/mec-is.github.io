@@ -45,6 +45,13 @@ div.text_cell_render {
   margin: 0 0 12px 25px;
 }
 
+/* CSS FIX  FOR FOOTER */
+#footer > p {
+  line-height: 12px;
+  color: #444;
+}
+/* ----------------- */
+
 .rendered_html :visited {
   text-decoration: none;
 }

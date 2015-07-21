@@ -261,7 +261,7 @@ section {
 .social {
   float: left;
   min-height: 100%;
-  background: #192029;
+  background: url('../images/blue-mocha-grunge.jpg') #192029;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -1862,9 +1862,6 @@ ol ul {
 li {
   line-height: 24px;
 }
-#footer > p {
-  line-height: 12px;
-}
 ul.unstyled,
 ol.unstyled {
   margin-left: 0;
@@ -3246,6 +3243,13 @@ div.text_cell_render {
 .rendered_html ul {
   margin: 0 0 12px 25px;
 }
+
+/* CSS FIX  FOR FOOTER */
+#footer > p {
+  line-height: 12px;
+  color: #444;
+}
+/* ----------------- */
 
 .rendered_html :visited {
   text-decoration: none;
