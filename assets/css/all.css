@@ -3177,6 +3177,7 @@ div.cell.text_cell.rendered{padding:0}
 
 body {
   position: static;
+  font-family: sans-serif;
 }
 
 pre {
