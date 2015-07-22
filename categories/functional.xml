@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>PYhummus (Functional)</title><link>https://example.com/</link><description></description><atom:link type="application/rss+xml" href="https://example.com/categories/functional.xml" rel="self"></atom:link><language>en</language><lastBuildDate>Wed, 22 Jul 2015 18:03:19 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Eckel On Decorators</title><link>https://example.com/posts/eckel-on-decorators/</link><dc:creator>lorenzogotuned</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>pyHummus (Functional)</title><link>http://mec-is.github.io</link><description></description><atom:link type="application/rss+xml" rel="self" href="http://mec-is.github.io/categories/functional.xml"></atom:link><language>en</language><lastBuildDate>Wed, 22 Jul 2015 20:28:45 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Eckel On Decorators</title><link>http://mec-is.github.io/posts/eckel-on-decorators/</link><dc:creator>lorenzogotuned</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
     &lt;div class="container" id="notebook-container"&gt;
 
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;
@@ -8,13 +8,13 @@
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
-&lt;h2 id="Python-Decorators-(Classes-over-Functions?)"&gt;Python Decorators (Classes over Functions?)&lt;a class="anchor-link" href="https://example.com/posts/eckel-on-decorators/#Python-Decorators-(Classes-over-Functions?)"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Taken From Bruce Eckel's Blog. 
+&lt;h2 id="Python-Decorators-(Classes-over-Functions?)"&gt;Python Decorators (Classes over Functions?)&lt;a class="anchor-link" href="http://mec-is.github.io/posts/eckel-on-decorators/#Python-Decorators-(Classes-over-Functions?)"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Taken From Bruce Eckel's Blog. 
  All rights reserved &lt;a href="http://bruceeckel.github.io"&gt;http://bruceeckel.github.io&lt;/a&gt;
 &lt;br&gt;
 &lt;br&gt;
 NOTE: the Author states that using classes as decorators instead of functions improve readability and code refactoring, and also conceptually it is a much better solution in his opinion. I think it can be a good practice, I would like to know what a functional programmer thinks about.
 &lt;br&gt;&lt;/p&gt;
-&lt;h3 id="Starting-example"&gt;Starting example&lt;a class="anchor-link" href="https://example.com/posts/eckel-on-decorators/#Starting-example"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;"The only constraint upon the object returned by the decorator is that it can be used as a function -- which basically means it must be callable. Thus, any classes we use as decorators must implement &lt;code&gt;__call__&lt;/code&gt;."
+&lt;h3 id="Starting-example"&gt;Starting example&lt;a class="anchor-link" href="http://mec-is.github.io/posts/eckel-on-decorators/#Starting-example"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;"The only constraint upon the object returned by the decorator is that it can be used as a function -- which basically means it must be callable. Thus, any classes we use as decorators must implement &lt;code&gt;__call__&lt;/code&gt;."
 &lt;br&gt;
 &lt;br&gt;&lt;/p&gt;
 
@@ -195,7 +195,7 @@ new_f
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;&lt;br&gt;
 &lt;br&gt;&lt;/p&gt;
-&lt;h2 id="Decorators-with-arguments"&gt;Decorators with arguments&lt;a class="anchor-link" href="https://example.com/posts/eckel-on-decorators/#Decorators-with-arguments"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;"Without arguments the function to be decorated is passed to the constructor, and the &lt;code&gt;__call__()&lt;/code&gt; method is called whenever the decorated function is invoked."
+&lt;h2 id="Decorators-with-arguments"&gt;Decorators with arguments&lt;a class="anchor-link" href="http://mec-is.github.io/posts/eckel-on-decorators/#Decorators-with-arguments"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;"Without arguments the function to be decorated is passed to the constructor, and the &lt;code&gt;__call__()&lt;/code&gt; method is called whenever the decorated function is invoked."
 &lt;br&gt;
 &lt;br&gt;&lt;/p&gt;
 
@@ -296,7 +296,7 @@ NOTE: instead of using &lt;code&gt;.__call__&lt;/code&gt; to run the decorated f
 &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-</description><category>Decorators</category><category>Functional</category><guid>https://example.com/posts/eckel-on-decorators/</guid><pubDate>Tue, 21 Jul 2015 19:27:30 GMT</pubDate></item><item><title>Functional Concepts For Python</title><link>https://example.com/posts/functional-concepts-for-python/</link><dc:creator>lorenzogotuned</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
+</description><category>Decorators</category><category>Functional</category><guid>http://mec-is.github.io/posts/eckel-on-decorators/</guid><pubDate>Tue, 21 Jul 2015 19:27:30 GMT</pubDate></item><item><title>Functional Concepts For Python</title><link>http://mec-is.github.io/posts/functional-concepts-for-python/</link><dc:creator>lorenzogotuned</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
     &lt;div class="container" id="notebook-container"&gt;
 
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;
@@ -304,7 +304,7 @@ NOTE: instead of using &lt;code&gt;.__call__&lt;/code&gt; to run the decorated f
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="FUNCTIONAL-CONCEPTS-FOR-PYTHON"&gt;FUNCTIONAL CONCEPTS FOR PYTHON&lt;a class="anchor-link" href="https://example.com/posts/functional-concepts-for-python/#FUNCTIONAL-CONCEPTS-FOR-PYTHON"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Taken from:
+&lt;h2 id="FUNCTIONAL-CONCEPTS-FOR-PYTHON"&gt;FUNCTIONAL CONCEPTS FOR PYTHON&lt;a class="anchor-link" href="http://mec-is.github.io/posts/functional-concepts-for-python/#FUNCTIONAL-CONCEPTS-FOR-PYTHON"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Taken from:
  Functional Programming in Python by David Mertz - O'Reilly (Free book)&lt;/p&gt;
 
 &lt;/div&gt;
@@ -315,7 +315,7 @@ NOTE: instead of using &lt;code&gt;.__call__&lt;/code&gt; to run the decorated f
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h4 id="ENCAPSULATION"&gt;ENCAPSULATION&lt;a class="anchor-link" href="https://example.com/posts/functional-concepts-for-python/#ENCAPSULATION"&gt;¶&lt;/a&gt;&lt;/h4&gt;
+&lt;h4 id="ENCAPSULATION"&gt;ENCAPSULATION&lt;a class="anchor-link" href="http://mec-is.github.io/posts/functional-concepts-for-python/#ENCAPSULATION"&gt;¶&lt;/a&gt;&lt;/h4&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -372,7 +372,7 @@ NOTE: instead of using &lt;code&gt;.__call__&lt;/code&gt; to run the decorated f
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h4 id="COMPREHENSIONS"&gt;COMPREHENSIONS&lt;a class="anchor-link" href="https://example.com/posts/functional-concepts-for-python/#COMPREHENSIONS"&gt;¶&lt;/a&gt;&lt;/h4&gt;
+&lt;h4 id="COMPREHENSIONS"&gt;COMPREHENSIONS&lt;a class="anchor-link" href="http://mec-is.github.io/posts/functional-concepts-for-python/#COMPREHENSIONS"&gt;¶&lt;/a&gt;&lt;/h4&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -404,7 +404,7 @@ NOTE: instead of using &lt;code&gt;.__call__&lt;/code&gt; to run the decorated f
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h4 id="GENERATORS"&gt;GENERATORS&lt;a class="anchor-link" href="https://example.com/posts/functional-concepts-for-python/#GENERATORS"&gt;¶&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;"they are also lazy. That is to say that they are merely a description of “how to get the data” that is not realized until one explicitly asks for it, either by calling &lt;code&gt;.next()&lt;/code&gt;"&lt;/p&gt;
+&lt;h4 id="GENERATORS"&gt;GENERATORS&lt;a class="anchor-link" href="http://mec-is.github.io/posts/functional-concepts-for-python/#GENERATORS"&gt;¶&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;"they are also lazy. That is to say that they are merely a description of “how to get the data” that is not realized until one explicitly asks for it, either by calling &lt;code&gt;.next()&lt;/code&gt;"&lt;/p&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
@@ -456,7 +456,7 @@ NOTE: instead of using &lt;code&gt;.__call__&lt;/code&gt; to run the decorated f
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h4 id="DICTS-AND-SETS"&gt;DICTS AND SETS&lt;a class="anchor-link" href="https://example.com/posts/functional-concepts-for-python/#DICTS-AND-SETS"&gt;¶&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;"dictionaries and sets can be created “all at once” rather than by repeatedly calling &lt;code&gt;.update()&lt;/code&gt; or &lt;code&gt;.add()&lt;/code&gt; in a loop. For example:"&lt;/p&gt;
+&lt;h4 id="DICTS-AND-SETS"&gt;DICTS AND SETS&lt;a class="anchor-link" href="http://mec-is.github.io/posts/functional-concepts-for-python/#DICTS-AND-SETS"&gt;¶&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;"dictionaries and sets can be created “all at once” rather than by repeatedly calling &lt;code&gt;.update()&lt;/code&gt; or &lt;code&gt;.add()&lt;/code&gt; in a loop. For example:"&lt;/p&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
@@ -492,7 +492,7 @@ NOTE: instead of using &lt;code&gt;.__call__&lt;/code&gt; to run the decorated f
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h4 id="RECURSION"&gt;RECURSION&lt;a class="anchor-link" href="https://example.com/posts/functional-concepts-for-python/#RECURSION"&gt;¶&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;"Python lacks an internal feature called tail call elimination that makes deep recursion computationally efficient in some languages. Let us find a trivial example where recursion is really just a kind of iteration:"&lt;/p&gt;
+&lt;h4 id="RECURSION"&gt;RECURSION&lt;a class="anchor-link" href="http://mec-is.github.io/posts/functional-concepts-for-python/#RECURSION"&gt;¶&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;"Python lacks an internal feature called tail call elimination that makes deep recursion computationally efficient in some languages. Let us find a trivial example where recursion is really just a kind of iteration:"&lt;/p&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
@@ -566,7 +566,7 @@ NOTE: instead of using &lt;code&gt;.__call__&lt;/code&gt; to run the decorated f
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h3 id="ALTERNATIVES-TO-FOR-LOOPs-(when-it-is-a-good-idea)"&gt;ALTERNATIVES TO FOR LOOPs (when it is a good idea)&lt;a class="anchor-link" href="https://example.com/posts/functional-concepts-for-python/#ALTERNATIVES-TO-FOR-LOOPs-(when-it-is-a-good-idea)"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;h4 id="using-map()"&gt;using map()&lt;a class="anchor-link" href="https://example.com/posts/functional-concepts-for-python/#using-map()"&gt;¶&lt;/a&gt;&lt;/h4&gt;
+&lt;h3 id="ALTERNATIVES-TO-FOR-LOOPs-(when-it-is-a-good-idea)"&gt;ALTERNATIVES TO FOR LOOPs (when it is a good idea)&lt;a class="anchor-link" href="http://mec-is.github.io/posts/functional-concepts-for-python/#ALTERNATIVES-TO-FOR-LOOPs-(when-it-is-a-good-idea)"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;h4 id="using-map()"&gt;using map()&lt;a class="anchor-link" href="http://mec-is.github.io/posts/functional-concepts-for-python/#using-map()"&gt;¶&lt;/a&gt;&lt;/h4&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -629,7 +629,7 @@ NOTE: instead of using &lt;code&gt;.__call__&lt;/code&gt; to run the decorated f
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h4 id="CALLABLES"&gt;CALLABLES&lt;a class="anchor-link" href="https://example.com/posts/functional-concepts-for-python/#CALLABLES"&gt;¶&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;"Python actually gives us several different ways to create functions, or at least something very function-like (i.e., that can be called). They are:&lt;/p&gt;
+&lt;h4 id="CALLABLES"&gt;CALLABLES&lt;a class="anchor-link" href="http://mec-is.github.io/posts/functional-concepts-for-python/#CALLABLES"&gt;¶&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;"Python actually gives us several different ways to create functions, or at least something very function-like (i.e., that can be called). They are:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Regular functions created with &lt;code&gt;def&lt;/code&gt; and given a name at definition time &lt;/li&gt;
 &lt;li&gt;Anonymous functions created with &lt;code&gt;lambda&lt;/code&gt; &lt;/li&gt;
@@ -647,7 +647,7 @@ NOTE: instead of using &lt;code&gt;.__call__&lt;/code&gt; to run the decorated f
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h5 id="Lambdas-and-named-functions"&gt;Lambdas and named functions&lt;a class="anchor-link" href="https://example.com/posts/functional-concepts-for-python/#Lambdas-and-named-functions"&gt;¶&lt;/a&gt;&lt;/h5&gt;
+&lt;h5 id="Lambdas-and-named-functions"&gt;Lambdas and named functions&lt;a class="anchor-link" href="http://mec-is.github.io/posts/functional-concepts-for-python/#Lambdas-and-named-functions"&gt;¶&lt;/a&gt;&lt;/h5&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -676,7 +676,7 @@ NOTE: instead of using &lt;code&gt;.__call__&lt;/code&gt; to run the decorated f
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h5 id="CLOSURES-and-CLASSES"&gt;CLOSURES and CLASSES&lt;a class="anchor-link" href="https://example.com/posts/functional-concepts-for-python/#CLOSURES-and-CLASSES"&gt;¶&lt;/a&gt;&lt;/h5&gt;
+&lt;h5 id="CLOSURES-and-CLASSES"&gt;CLOSURES and CLASSES&lt;a class="anchor-link" href="http://mec-is.github.io/posts/functional-concepts-for-python/#CLOSURES-and-CLASSES"&gt;¶&lt;/a&gt;&lt;/h5&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -746,7 +746,7 @@ NOTE: instead of using &lt;code&gt;.__call__&lt;/code&gt; to run the decorated f
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h5 id="METHODS-OF-CLASSES"&gt;METHODS OF CLASSES&lt;a class="anchor-link" href="https://example.com/posts/functional-concepts-for-python/#METHODS-OF-CLASSES"&gt;¶&lt;/a&gt;&lt;/h5&gt;
+&lt;h5 id="METHODS-OF-CLASSES"&gt;METHODS OF CLASSES&lt;a class="anchor-link" href="http://mec-is.github.io/posts/functional-concepts-for-python/#METHODS-OF-CLASSES"&gt;¶&lt;/a&gt;&lt;/h5&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -786,7 +786,7 @@ NOTE: instead of using &lt;code&gt;.__call__&lt;/code&gt; to run the decorated f
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h5 id="STATIC-METHODS"&gt;STATIC METHODS&lt;a class="anchor-link" href="https://example.com/posts/functional-concepts-for-python/#STATIC-METHODS"&gt;¶&lt;/a&gt;&lt;/h5&gt;
+&lt;h5 id="STATIC-METHODS"&gt;STATIC METHODS&lt;a class="anchor-link" href="http://mec-is.github.io/posts/functional-concepts-for-python/#STATIC-METHODS"&gt;¶&lt;/a&gt;&lt;/h5&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -822,7 +822,7 @@ NOTE: instead of using &lt;code&gt;.__call__&lt;/code&gt; to run the decorated f
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h5 id="GENERATOR-FUNCTIONS"&gt;GENERATOR FUNCTIONS&lt;a class="anchor-link" href="https://example.com/posts/functional-concepts-for-python/#GENERATOR-FUNCTIONS"&gt;¶&lt;/a&gt;&lt;/h5&gt;
+&lt;h5 id="GENERATOR-FUNCTIONS"&gt;GENERATOR FUNCTIONS&lt;a class="anchor-link" href="http://mec-is.github.io/posts/functional-concepts-for-python/#GENERATOR-FUNCTIONS"&gt;¶&lt;/a&gt;&lt;/h5&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -877,7 +877,7 @@ NOTE: instead of using &lt;code&gt;.__call__&lt;/code&gt; to run the decorated f
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h3 id="MULTIPLE-DISPATCHING"&gt;MULTIPLE DISPATCHING&lt;a class="anchor-link" href="https://example.com/posts/functional-concepts-for-python/#MULTIPLE-DISPATCHING"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;"A very interesting approach to programming multiple paths of execution is a technique called “multiple dispatch” or sometimes 'multimethods'. The idea here is to declare multiple signatures for a single function and call the actual computation that matches the types or properties of the calling arguments." 
+&lt;h3 id="MULTIPLE-DISPATCHING"&gt;MULTIPLE DISPATCHING&lt;a class="anchor-link" href="http://mec-is.github.io/posts/functional-concepts-for-python/#MULTIPLE-DISPATCHING"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;"A very interesting approach to programming multiple paths of execution is a technique called “multiple dispatch” or sometimes 'multimethods'. The idea here is to declare multiple signatures for a single function and call the actual computation that matches the types or properties of the calling arguments." 
 Note: used to avoid many if-else statements to test matchings&lt;/p&gt;
 
 &lt;/div&gt;
@@ -969,7 +969,7 @@ Note: used to avoid many if-else statements to test matchings&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h3 id="LAZY-EVALUATION"&gt;LAZY EVALUATION&lt;a class="anchor-link" href="https://example.com/posts/functional-concepts-for-python/#LAZY-EVALUATION"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;h4 id='Custom-sequence-using-"abc"'&gt;Custom sequence using "abc"&lt;a class="anchor-link" href="https://example.com/posts/functional-concepts-for-python/#Custom-sequence-using-%22abc%22"&gt;¶&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;"Given the get_primes() generator function discussed earlier, we might write our own container to simulate the same thing, for example:"&lt;/p&gt;
+&lt;h3 id="LAZY-EVALUATION"&gt;LAZY EVALUATION&lt;a class="anchor-link" href="http://mec-is.github.io/posts/functional-concepts-for-python/#LAZY-EVALUATION"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;h4 id='Custom-sequence-using-"abc"'&gt;Custom sequence using "abc"&lt;a class="anchor-link" href="http://mec-is.github.io/posts/functional-concepts-for-python/#Custom-sequence-using-%22abc%22"&gt;¶&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;"Given the get_primes() generator function discussed earlier, we might write our own container to simulate the same thing, for example:"&lt;/p&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
@@ -1013,7 +1013,7 @@ Note: used to avoid many if-else statements to test matchings&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h4 id="Custom-iterator"&gt;Custom iterator&lt;a class="anchor-link" href="https://example.com/posts/functional-concepts-for-python/#Custom-iterator"&gt;¶&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;"...writing custom iterators as generator functions is most natural. However, we can also create custom classes that obey the protocol (note: iterator); often these will have other behaviors (i.e., methods) as well, but most such behaviors necessarily rely on statefulness and side effects to be meaningful"&lt;/p&gt;
+&lt;h4 id="Custom-iterator"&gt;Custom iterator&lt;a class="anchor-link" href="http://mec-is.github.io/posts/functional-concepts-for-python/#Custom-iterator"&gt;¶&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;"...writing custom iterators as generator functions is most natural. However, we can also create custom classes that obey the protocol (note: iterator); often these will have other behaviors (i.e., methods) as well, but most such behaviors necessarily rely on statefulness and side effects to be meaningful"&lt;/p&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
@@ -1072,7 +1072,7 @@ Note: used to avoid many if-else statements to test matchings&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h5 id="Module:-itertools"&gt;Module: itertools&lt;a class="anchor-link" href="https://example.com/posts/functional-concepts-for-python/#Module:-itertools"&gt;¶&lt;/a&gt;&lt;/h5&gt;&lt;p&gt;"The module itertools is a collection of very powerful—and carefully designed—functions for performing iterator algebra. That is, these allow you to combine iterators in sophisticated ways without having to concretely instantiate anything more than is currently required"
+&lt;h5 id="Module:-itertools"&gt;Module: itertools&lt;a class="anchor-link" href="http://mec-is.github.io/posts/functional-concepts-for-python/#Module:-itertools"&gt;¶&lt;/a&gt;&lt;/h5&gt;&lt;p&gt;"The module itertools is a collection of very powerful—and carefully designed—functions for performing iterator algebra. That is, these allow you to combine iterators in sophisticated ways without having to concretely instantiate anything more than is currently required"
 &lt;a href="https://docs.python.org/3.5/library/itertools.html"&gt;https://docs.python.org/3.5/library/itertools.html&lt;/a&gt;&lt;/p&gt;
 
 &lt;/div&gt;
@@ -1135,7 +1135,7 @@ True
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h3 id="Higher-Order-Functions"&gt;Higher Order Functions&lt;a class="anchor-link" href="https://example.com/posts/functional-concepts-for-python/#Higher-Order-Functions"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;"a higher-order function is simply a function that takes one or more functions as arguments and/or produces a function as a result."&lt;/p&gt;
+&lt;h3 id="Higher-Order-Functions"&gt;Higher Order Functions&lt;a class="anchor-link" href="http://mec-is.github.io/posts/functional-concepts-for-python/#Higher-Order-Functions"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;"a higher-order function is simply a function that takes one or more functions as arguments and/or produces a function as a result."&lt;/p&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
@@ -1178,7 +1178,7 @@ True
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h4 id="DECORATORS"&gt;DECORATORS&lt;a class="anchor-link" href="https://example.com/posts/functional-concepts-for-python/#DECORATORS"&gt;¶&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;"probably the most common use of higher-order functions in Python is as decorators. Decorators in Python are possible 
+&lt;h4 id="DECORATORS"&gt;DECORATORS&lt;a class="anchor-link" href="http://mec-is.github.io/posts/functional-concepts-for-python/#DECORATORS"&gt;¶&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;"probably the most common use of higher-order functions in Python is as decorators. Decorators in Python are possible 
 because:"&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;encapsulation: define a function inside a function, the contained function can access but not assign the container function&lt;/li&gt;
@@ -1355,4 +1355,4 @@ func_wrapper
 &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-</description><category>Comprehensions</category><category>Decorators</category><category>Functional</category><category>Generators</category><category>Multi-Dispatching</category><guid>https://example.com/posts/functional-concepts-for-python/</guid><pubDate>Mon, 20 Jul 2015 20:31:23 GMT</pubDate></item></channel></rss>
+</description><category>Comprehensions</category><category>Decorators</category><category>Functional</category><category>Generators</category><category>Multi-Dispatching</category><guid>http://mec-is.github.io/posts/functional-concepts-for-python/</guid><pubDate>Mon, 20 Jul 2015 20:31:23 GMT</pubDate></item></channel></rss>

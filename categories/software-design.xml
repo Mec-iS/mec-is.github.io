@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>PYhummus (Software Design)</title><link>https://example.com/</link><description></description><atom:link type="application/rss+xml" href="https://example.com/categories/software-design.xml" rel="self"></atom:link><language>en</language><lastBuildDate>Wed, 22 Jul 2015 18:03:19 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Norvig On Programs Design</title><link>https://example.com/posts/norvig-on-programs-design/</link><dc:creator>lorenzogotuned</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>pyHummus (Software Design)</title><link>http://mec-is.github.io</link><description></description><atom:link type="application/rss+xml" rel="self" href="http://mec-is.github.io/categories/software-design.xml"></atom:link><language>en</language><lastBuildDate>Wed, 22 Jul 2015 20:28:45 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Norvig On Programs Design</title><link>http://mec-is.github.io/posts/norvig-on-programs-design/</link><dc:creator>lorenzogotuned</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
     &lt;div class="container" id="notebook-container"&gt;
 
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;
@@ -7,26 +7,26 @@
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="Python-Programs-Design"&gt;Python Programs Design&lt;a class="anchor-link" href="https://example.com/posts/norvig-on-programs-design/#Python-Programs-Design"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Inspired by Peter Norvig's course at Udacity&lt;br&gt;
+&lt;h2 id="Python-Programs-Design"&gt;Python Programs Design&lt;a class="anchor-link" href="http://mec-is.github.io/posts/norvig-on-programs-design/#Python-Programs-Design"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Inspired by Peter Norvig's course at Udacity&lt;br&gt;
  &lt;a href="https://www.udacity.com/course/design-of-computer-programs--cs212"&gt;https://www.udacity.com/course/design-of-computer-programs--cs212&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id="Workflow"&gt;Workflow&lt;a class="anchor-link" href="https://example.com/posts/norvig-on-programs-design/#Workflow"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;??&lt;/strong&gt;   &amp;gt;   &lt;strong&gt;problem&lt;/strong&gt;      &amp;gt;      &lt;strong&gt;spec&lt;/strong&gt;      &amp;gt;      &lt;strong&gt;code&lt;/strong&gt;&lt;br&gt;
+&lt;h3 id="Workflow"&gt;Workflow&lt;a class="anchor-link" href="http://mec-is.github.io/posts/norvig-on-programs-design/#Workflow"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;??&lt;/strong&gt;   &amp;gt;   &lt;strong&gt;problem&lt;/strong&gt;      &amp;gt;      &lt;strong&gt;spec&lt;/strong&gt;      &amp;gt;      &lt;strong&gt;code&lt;/strong&gt;&lt;br&gt;
  &lt;em&gt;understand&lt;/em&gt;        &lt;em&gt;specify&lt;/em&gt;             &lt;em&gt;design&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Starting from a relative understanding of a problem/task we &lt;em&gt;specify&lt;/em&gt; how things work in the domain of the problem, to &lt;em&gt;design&lt;/em&gt; code that solve the problem or realize the task&lt;/p&gt;
-&lt;h4 id="Barebone"&gt;Barebone&lt;a class="anchor-link" href="https://example.com/posts/norvig-on-programs-design/#Barebone"&gt;¶&lt;/a&gt;&lt;/h4&gt;&lt;ol&gt;
+&lt;h4 id="Barebone"&gt;Barebone&lt;a class="anchor-link" href="http://mec-is.github.io/posts/norvig-on-programs-design/#Barebone"&gt;¶&lt;/a&gt;&lt;/h4&gt;&lt;ol&gt;
 &lt;li&gt;Explain to yourself and in a team the task/problem&lt;/li&gt;
 &lt;li&gt;Reach a written/unformal specification of the task, defining sequential sub-tasks or complementary functions to solve the problem&lt;/li&gt;
 &lt;li&gt;Design your code to solve tasks and sub-tasks, minding best practices (or design patterns)&lt;/li&gt;
 &lt;li&gt;Code&lt;/li&gt;
 &lt;li&gt;Iterate with adjustments and tests&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h4 id="Code"&gt;Code&lt;a class="anchor-link" href="https://example.com/posts/norvig-on-programs-design/#Code"&gt;¶&lt;/a&gt;&lt;/h4&gt;&lt;ol&gt;
+&lt;h4 id="Code"&gt;Code&lt;a class="anchor-link" href="http://mec-is.github.io/posts/norvig-on-programs-design/#Code"&gt;¶&lt;/a&gt;&lt;/h4&gt;&lt;ol&gt;
 &lt;li&gt;write down a function name that realize a sub-task&lt;/li&gt;
 &lt;li&gt;write the docstring for the function&lt;/li&gt;
 &lt;li&gt;find the best built-in functions or libraries to realize the task in the function (forget optimization for now, try to be idiomatic and use the fittest tools)&lt;/li&gt;
 &lt;li&gt;write different functions depending on your style (functional, object oriented)&lt;/li&gt;
 &lt;li&gt;Accomplish the task by defining a "main" script that uses the functions&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h4 id="Example"&gt;Example&lt;a class="anchor-link" href="https://example.com/posts/norvig-on-programs-design/#Example"&gt;¶&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;We are going to use the example of simulating a Poker game as a playground for a program design:&lt;/p&gt;
+&lt;h4 id="Example"&gt;Example&lt;a class="anchor-link" href="http://mec-is.github.io/posts/norvig-on-programs-design/#Example"&gt;¶&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;We are going to use the example of simulating a Poker game as a playground for a program design:&lt;/p&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
@@ -80,7 +80,7 @@
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h4 id="Best-use-of-Python-design-principles"&gt;Best use of Python design principles&lt;a class="anchor-link" href="https://example.com/posts/norvig-on-programs-design/#Best-use-of-Python-design-principles"&gt;¶&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;Going on we will get familiar with Python design principles and we will know how to use the tools the language provides. Let's see how it is possible by introducing in our design a function to define ranks for hands in a poker game.&lt;/p&gt;
+&lt;h4 id="Best-use-of-Python-design-principles"&gt;Best use of Python design principles&lt;a class="anchor-link" href="http://mec-is.github.io/posts/norvig-on-programs-design/#Best-use-of-Python-design-principles"&gt;¶&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;Going on we will get familiar with Python design principles and we will know how to use the tools the language provides. Let's see how it is possible by introducing in our design a function to define ranks for hands in a poker game.&lt;/p&gt;
 &lt;p&gt;NOTE: &lt;strong&gt;LPD&lt;/strong&gt; stands for Leveraging Python Design, in this kind of tip I try to underline how we can design Python programs leveraging peculiar features of Python builtins or language or idioms.&lt;/p&gt;
 
 &lt;/div&gt;
@@ -123,7 +123,7 @@
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h4 id="Testing"&gt;Testing&lt;a class="anchor-link" href="https://example.com/posts/norvig-on-programs-design/#Testing"&gt;¶&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;"To be a good programmer you need to be a good tester".&lt;/p&gt;
+&lt;h4 id="Testing"&gt;Testing&lt;a class="anchor-link" href="http://mec-is.github.io/posts/norvig-on-programs-design/#Testing"&gt;¶&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;"To be a good programmer you need to be a good tester".&lt;/p&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
@@ -289,7 +289,7 @@ True
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;&lt;strong&gt;LPD&lt;/strong&gt;: The design choice of using &lt;code&gt;int&lt;/code&gt; and &lt;code&gt;tuples&lt;/code&gt; to describe ranks and hands sounds good because it leverages tuples comparision and built-in features in &lt;code&gt;max()&lt;/code&gt;.&lt;/p&gt;
-&lt;h4 id="From-hands-to-card-ranks"&gt;From hands to card ranks&lt;a class="anchor-link" href="https://example.com/posts/norvig-on-programs-design/#From-hands-to-card-ranks"&gt;¶&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;Let's see how we can add another piece to the puzzle by defining &lt;code&gt;card_ranks()&lt;/code&gt;:&lt;/p&gt;
+&lt;h4 id="From-hands-to-card-ranks"&gt;From hands to card ranks&lt;a class="anchor-link" href="http://mec-is.github.io/posts/norvig-on-programs-design/#From-hands-to-card-ranks"&gt;¶&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;Let's see how we can add another piece to the puzzle by defining &lt;code&gt;card_ranks()&lt;/code&gt;:&lt;/p&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
@@ -323,7 +323,7 @@ True
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h4 id="Spot-a-point-in-hands"&gt;Spot a point in hands&lt;a class="anchor-link" href="https://example.com/posts/norvig-on-programs-design/#Spot-a-point-in-hands"&gt;¶&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;Let's see how we can add other functions to the design by defining the methods to spot poker rankings into a ranked hand, stuff like &lt;code&gt;kind()&lt;/code&gt;, &lt;code&gt;straight()&lt;/code&gt;, &lt;code&gt;flush()&lt;/code&gt;, &lt;code&gt;two_pair()&lt;/code&gt;. First we add something to our &lt;code&gt;test()&lt;/code&gt;:&lt;/p&gt;
+&lt;h4 id="Spot-a-point-in-hands"&gt;Spot a point in hands&lt;a class="anchor-link" href="http://mec-is.github.io/posts/norvig-on-programs-design/#Spot-a-point-in-hands"&gt;¶&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;Let's see how we can add other functions to the design by defining the methods to spot poker rankings into a ranked hand, stuff like &lt;code&gt;kind()&lt;/code&gt;, &lt;code&gt;straight()&lt;/code&gt;, &lt;code&gt;flush()&lt;/code&gt;, &lt;code&gt;two_pair()&lt;/code&gt;. First we add something to our &lt;code&gt;test()&lt;/code&gt;:&lt;/p&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
@@ -540,7 +540,7 @@ True
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h4 id="Testing-is-never-enough"&gt;Testing is never enough&lt;a class="anchor-link" href="https://example.com/posts/norvig-on-programs-design/#Testing-is-never-enough"&gt;¶&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;All the rankings are up and working, but we need &lt;strong&gt;more tests&lt;/strong&gt; to handle edge cases and exceptions.&lt;/p&gt;
+&lt;h4 id="Testing-is-never-enough"&gt;Testing is never enough&lt;a class="anchor-link" href="http://mec-is.github.io/posts/norvig-on-programs-design/#Testing-is-never-enough"&gt;¶&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;All the rankings are up and working, but we need &lt;strong&gt;more tests&lt;/strong&gt; to handle edge cases and exceptions.&lt;/p&gt;
 &lt;p&gt;This is only Lesson 1!&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;How would you handle a straight with Axe low (A, 2, 3, 4, 5)?&lt;/li&gt;
@@ -568,4 +568,4 @@ True
 &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-</description><category>Software Design</category><guid>https://example.com/posts/norvig-on-programs-design/</guid><pubDate>Wed, 22 Jul 2015 17:30:15 GMT</pubDate></item></channel></rss>
+</description><category>Software Design</category><guid>http://mec-is.github.io/posts/norvig-on-programs-design/</guid><pubDate>Wed, 22 Jul 2015 17:30:15 GMT</pubDate></item></channel></rss>

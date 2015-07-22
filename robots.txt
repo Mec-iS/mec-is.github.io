@@ -1,2 +1,2 @@
-Sitemap: https://example.com/sitemapindex.xml
+Sitemap: http://mec-is.github.io/sitemapindex.xml
 
