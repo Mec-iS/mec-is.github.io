@@ -3,7 +3,7 @@
 .. slug: interlude
 .. date: 2015-07-21 22:30:45 UTC+02:00
 .. tags: Music 
-.. category: 
+.. category: Sparetime
 .. link: 
 .. description: 
 .. type: text

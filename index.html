@@ -22,15 +22,605 @@ article: http://ogp.me/ns/article#
 <li><a href="#" title="Home"><i class="icon-home"></i></a></li>
             <li><a href="archive.html" title="Archives"><i class="icon-folder-open-alt"></i></a></li>
             <li><a href="categories/index.html" title="Tags"><i class="icon-tags"></i></a></li>
-            <li><a href="stories/about/index.html" title="About me"><i class="icon-user"></i></a></li>
+            <li><a href="https://profiles.udacity.com/u/lorenzomoriondo" title="Me At Udacity"><i class="icon-user"></i></a></li>
             <li><a href="https://twitter.com/lorenzogotuned" title="My Twitter"><i class="icon-twitter"></i></a></li>
-            <li><a href="https://github.com/Mec-iS" title="My Github"><i class="icon-github"></i></a></li>
+            <li><a href="https://it.linkedin.com/in/lorenzomoriondo" title="My LinkedIn"><i class="icon-linkedin"></i></a></li>
 
         <li>        <footer id="footer" role="contentinfo"><p>2015 Content collected and organized by         <a href="mailto:tunedconsulting@gmail.com">lorenzogotuned</a>   Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>      This material has been collected for learning purposes only and no commercial use. All rights reserved to sources.</p>
             
         </footer>
 </li>
         </ul></section><section class="page-content"><div class="content" rel="main">
+        <div class="post">
+            <h1 class="title"><a href="posts/norvig-on-programs-design/">Norvig On Programs Design</a></h1>
+            <div class="meta">
+                <div class="authordate">
+                    <time class="timeago" datetime="2015-07-22T19:30:15+02:00">2015-07-22 19:30</time>
+</div>
+                <div class="stats">
+                    
+                </div>
+                        <div itemprop="keywords" class="tags">
+        <ul>
+        Tags : 
+           <li><a class="tag p-category" href="categories/software-design/" rel="tag">Software Design</a></li>
+        </ul>
+</div>
+
+            </div>
+            <!-- <div class="body">
+                <body><div tabindex="-1" id="notebook" class="border-box-sizing">
+    <div class="container" id="notebook-container">
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Python-Programs-Design">Python Programs Design<a class="anchor-link" href="/posts/norvig-on-programs-design/#Python-Programs-Design">¶</a></h2><p>Inspired by Peter Norvig's course at Udacity<br>
+ <a href="https://www.udacity.com/course/design-of-computer-programs--cs212">https://www.udacity.com/course/design-of-computer-programs--cs212</a></p>
+<h3 id="Workflow">Workflow<a class="anchor-link" href="/posts/norvig-on-programs-design/#Workflow">¶</a></h3><p><strong>??</strong>   &gt;   <strong>problem</strong>      &gt;      <strong>spec</strong>      &gt;      <strong>code</strong><br>
+ <em>understand</em>        <em>specify</em>             <em>design</em></p>
+<p>Starting from a relative understanding of a problem/task we <em>specify</em> how things work in the domain of the problem, to <em>design</em> code that solve the problem or realize the task</p>
+<h4 id="Barebone">Barebone<a class="anchor-link" href="/posts/norvig-on-programs-design/#Barebone">¶</a></h4><ol>
+<li>Explain to yourself and in a team the task/problem</li>
+<li>Reach a written/unformal specification of the task, defining sequential sub-tasks or complementary functions to solve the problem</li>
+<li>Design your code to solve tasks and sub-tasks, minding best practices (or design patterns)</li>
+<li>Code</li>
+<li>Iterate with adjustments and tests</li>
+</ol>
+<h4 id="Code">Code<a class="anchor-link" href="/posts/norvig-on-programs-design/#Code">¶</a></h4><ol>
+<li>write down a function name that realize a sub-task</li>
+<li>write the docstring for the function</li>
+<li>find the best built-in functions or libraries to realize the task in the function (forget optimization for now, try to be idiomatic and use the fittest tools)</li>
+<li>write different functions depending on your style (functional, object oriented)</li>
+<li>Accomplish the task by defining a "main" script that uses the functions</li>
+</ol>
+<h4 id="Example">Example<a class="anchor-link" href="/posts/norvig-on-programs-design/#Example">¶</a></h4><p>We are going to use the example of simulating a Poker game as a playground for a program design:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="k">def</span> <span class="nf">poker</span><span class="p">(</span><span class="n">hands</span><span class="p">):</span>                   <span class="c"># function name</span>
+    <span class="sd">""" Return the best hand: poker([hand, ..]) =&gt; hand """</span>  <span class="c"># docstring</span>
+    <span class="k">return</span> <span class="nb">max</span><span class="p">()</span>                    <span class="c"># the fittest function to return the maximum value in Python is max()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">max</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">]))</span>            <span class="c"># study from the documentation the behaviour of the function</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">max</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">key</span><span class="o">=</span><span class="nb">abs</span><span class="p">))</span>  <span class="c"># https://docs.python.org/3.3/library/functions.html#max</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>5
+-5
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>A program is a set of functions, classes and operations working to solve/realize the same problem/task</strong></p>
+<p>NOTE: Python3 basic built-ins <a href="https://docs.python.org/3.3/library/functions.html">https://docs.python.org/3.3/library/functions.html</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Best-use-of-Python-design-principles">Best use of Python design principles<a class="anchor-link" href="/posts/norvig-on-programs-design/#Best-use-of-Python-design-principles">¶</a></h4><p>Going on we will get familiar with Python design principles and we will know how to use the tools the language provides. Let's see how it is possible by introducing in our design a function to define ranks for hands in a poker game.</p>
+<p>NOTE: <strong>LPD</strong> stands for Leveraging Python Design, in this kind of tip I try to underline how we can design Python programs leveraging peculiar features of Python builtins or language or idioms.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="k">def</span> <span class="nf">hand_rank</span><span class="p">(</span><span class="n">hand</span><span class="p">):</span>
+    <span class="sd">""" Return the rank("point") of an hand: hand =&gt; rank according to poker rules </span>
+<span class="sd">    ranks = { nothing: 0, pair: 1, double pair: 2, ..., full house: 6, four of a kind: 7, ... } """</span>
+    <span class="k">return</span> <span class="k">None</span> <span class="c"># by now it is not implemented, see https://youtu.be/WYHN2HfPISY if you want more details</span>
+
+<span class="c"># How can we return the hand with the best ranking from a list of hands </span>
+
+<span class="k">def</span> <span class="nf">poker</span><span class="p">(</span><span class="n">hands</span><span class="p">):</span>                   
+    <span class="sd">""" Return the best hand: [hand, ..] =&gt; hand """</span> 
+    <span class="k">return</span> <span class="nb">max</span><span class="p">(</span><span class="n">hands</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">hand_rank</span><span class="p">)</span>  <span class="c"># use of a custom function as a key for max()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>LPD</strong>: If we use the 'key' argument in max() we can find the max value coming out from the hand_rank() this is an example of how a Python function fits perfectly to solve a sub-task for our problem.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Testing">Testing<a class="anchor-link" href="/posts/norvig-on-programs-design/#Testing">¶</a></h4><p>"To be a good programmer you need to be a good tester".</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="k">def</span> <span class="nf">test</span><span class="p">():</span>
+    <span class="sd">""" Test for poker() function """</span>
+    <span class="n">sf</span> <span class="o">=</span> <span class="s">"6C 7C 8C 9C TC"</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>   <span class="c"># straight flush</span>
+    <span class="n">fk</span> <span class="o">=</span> <span class="s">"9D 9H 9S 9C TD"</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>   <span class="c"># four of a kind</span>
+    <span class="n">fh</span> <span class="o">=</span> <span class="s">"TC TD TH 9C 9h"</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>   <span class="c"># full house</span>
+    <span class="k">assert</span> <span class="n">poker</span><span class="p">([</span><span class="n">sf</span><span class="p">,</span> <span class="n">fk</span><span class="p">,</span> <span class="n">fh</span><span class="p">])</span> <span class="o">==</span> <span class="n">sf</span>
+    <span class="k">return</span> <span class="s">"test passed"</span>
+    
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>"one of the secret of testing is to do extreme value".</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="k">def</span> <span class="nf">test</span><span class="p">():</span>
+    <span class="sd">""" Test for poker() function """</span>
+    <span class="n">sf</span> <span class="o">=</span> <span class="s">"6C 7C 8C 9C TC"</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>   <span class="c"># straight flush</span>
+    <span class="n">fk</span> <span class="o">=</span> <span class="s">"9D 9H 9S 9C TD"</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>   <span class="c"># four of a kind</span>
+    <span class="n">fh</span> <span class="o">=</span> <span class="s">"TC TD TH 9C 9h"</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>   <span class="c"># full house</span>
+    <span class="k">assert</span> <span class="n">poker</span><span class="p">([</span><span class="n">sf</span><span class="p">,</span> <span class="n">fk</span><span class="p">,</span> <span class="n">fh</span><span class="p">])</span> <span class="o">==</span> <span class="n">sf</span>
+    <span class="k">assert</span> <span class="n">poker</span><span class="p">([</span><span class="n">sf</span><span class="p">,</span> <span class="n">sf</span><span class="p">])</span> <span class="o">==</span> <span class="n">sf</span>        <span class="c"># extreme case, a hand challenging itself</span>
+    <span class="k">assert</span> <span class="n">poker</span><span class="p">([</span><span class="n">sf</span><span class="p">]</span> <span class="o">+</span> <span class="mi">99</span><span class="o">*</span><span class="p">[</span><span class="n">fh</span><span class="p">])</span> <span class="o">==</span> <span class="n">sg</span>  <span class="c"># extreme case, a hand challenging 99 other hands</span>
+    <span class="k">return</span> <span class="s">'test pass'</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This is the starting design for <code>hand_rank()</code>:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="k">def</span> <span class="nf">hand_rank</span><span class="p">(</span><span class="n">hand</span><span class="p">):</span>
+    <span class="sd">""" Return a tuple describing the hand, to make hands comparable.</span>
+<span class="sd">    kind(), straight() and flush() are not yet implemented, they are functions that spot card ranks.</span>
+<span class="sd">    card_ranks() is not yet implemented also, it turns hands in card ranks (see test()) """</span>
+    <span class="n">ranks</span> <span class="o">=</span> <span class="n">card_ranks</span><span class="p">(</span><span class="n">hand</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">straight</span><span class="p">(</span><span class="n">ranks</span><span class="p">)</span> <span class="ow">and</span> <span class="n">flush</span><span class="p">(</span><span class="n">hand</span><span class="p">):</span>            <span class="c"># straight flush, (8, higher card, [card, card, card, card, card])</span>
+        <span class="k">return</span> <span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="nb">max</span><span class="p">(</span><span class="n">ranks</span><span class="p">))</span>
+    <span class="k">elif</span> <span class="n">kind</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">ranks</span><span class="p">):</span>                           <span class="c"># 4 of a kind, (7, card, kicker)</span>
+        <span class="k">return</span> <span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="n">kind</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">ranks</span><span class="p">),</span> <span class="n">kind</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">ranks</span><span class="p">))</span>
+    <span class="k">elif</span> <span class="n">kind</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">ranks</span><span class="p">)</span> <span class="ow">and</span> <span class="n">kind</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">ranks</span><span class="p">):</span>        <span class="c"># full house, (6, higher card, lower card)</span>
+        <span class="k">return</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="n">kind</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="n">ranks</span><span class="p">),</span> <span class="n">kind</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">ranks</span><span class="p">))</span>
+    <span class="k">elif</span> <span class="n">flush</span><span class="p">(</span><span class="n">hand</span><span class="p">):</span>                              <span class="c"># flush, (5, higher card, [card, card, card, card, card])</span>
+        <span class="k">return</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="nb">max</span><span class="p">(</span><span class="n">hand</span><span class="p">))</span>
+    <span class="k">elif</span> <span class="n">straight</span><span class="p">(</span><span class="n">ranks</span><span class="p">):</span>                          <span class="c"># straight, (4, higher card)</span>
+        <span class="k">return</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">kind</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">ranks</span><span class="p">))</span>
+    <span class="k">elif</span> <span class="n">kind</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">ranks</span><span class="p">):</span>                           <span class="c"># 3 of a kind, (3, card, kickers)</span>
+        <span class="k">return</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">kind</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">ranks</span><span class="p">),</span><span class="n">kind</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">ranks</span><span class="p">))</span>
+    <span class="k">elif</span> <span class="n">two_pair</span><span class="p">(</span><span class="n">ranks</span><span class="p">):</span>                          <span class="c"># 2 pair, (...)</span>
+        <span class="k">return</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">kind</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">ranks</span><span class="p">),</span> <span class="n">kind</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="n">ranks</span><span class="p">),</span> <span class="n">kind</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">ranks</span><span class="p">))</span>
+    <span class="k">elif</span> <span class="n">kind</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">ranks</span><span class="p">):</span>                           <span class="c"># kind, (...)</span>
+        <span class="k">return</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">ranks</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>                                          <span class="c"># high card (...)</span>
+        <span class="k">return</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">ranks</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">test</span><span class="p">():</span>
+    <span class="s">"Test cases for the functions in poker program"</span>
+    <span class="n">sf</span> <span class="o">=</span> <span class="s">"6C 7C 8C 9C TC"</span><span class="o">.</span><span class="n">split</span><span class="p">()</span> <span class="c"># Straight Flush</span>
+    <span class="n">fk</span> <span class="o">=</span> <span class="s">"9D 9H 9S 9C 7D"</span><span class="o">.</span><span class="n">split</span><span class="p">()</span> <span class="c"># Four of a Kind</span>
+    <span class="n">fh</span> <span class="o">=</span> <span class="s">"TD TC TH 7C 7D"</span><span class="o">.</span><span class="n">split</span><span class="p">()</span> <span class="c"># Full House</span>
+    <span class="k">assert</span> <span class="n">poker</span><span class="p">([</span><span class="n">sf</span><span class="p">,</span> <span class="n">fk</span><span class="p">,</span> <span class="n">fh</span><span class="p">])</span> <span class="o">==</span> <span class="n">sf</span>
+    <span class="k">assert</span> <span class="n">poker</span><span class="p">([</span><span class="n">fk</span><span class="p">,</span> <span class="n">fh</span><span class="p">])</span> <span class="o">==</span> <span class="n">fk</span>
+    <span class="k">assert</span> <span class="n">poker</span><span class="p">([</span><span class="n">fh</span><span class="p">,</span> <span class="n">fh</span><span class="p">])</span> <span class="o">==</span> <span class="n">fh</span>
+    <span class="k">assert</span> <span class="n">poker</span><span class="p">([</span><span class="n">sf</span><span class="p">])</span> <span class="o">==</span> <span class="n">sf</span>
+    <span class="k">assert</span> <span class="n">poker</span><span class="p">([</span><span class="n">sf</span><span class="p">]</span> <span class="o">+</span> <span class="mi">99</span><span class="o">*</span><span class="p">[</span><span class="n">fh</span><span class="p">])</span> <span class="o">==</span> <span class="n">sf</span>
+    <span class="k">assert</span> <span class="n">hand_rank</span><span class="p">(</span><span class="n">sf</span><span class="p">)</span> <span class="o">==</span> <span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">hand_rank</span><span class="p">(</span><span class="n">fk</span><span class="p">)</span> <span class="o">==</span> <span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">hand_rank</span><span class="p">(</span><span class="n">fh</span><span class="p">)</span> <span class="o">==</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">card_ranks</span><span class="p">(</span><span class="n">sf</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+    <span class="k">assert</span> <span class="n">card_ranks</span><span class="p">(</span><span class="n">fk</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
+    <span class="k">assert</span> <span class="n">card_ranks</span><span class="p">(</span><span class="n">fh</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
+    <span class="k">return</span> <span class="s">'tests pass'</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>LPD</strong>: Tuples have been choosen as structure for describing the hands, in general <code>(rank, higher card, tie breakers)</code>. Each rank has its own definition. Ranks can be compared using Python's tuples and 'lexigraphical' operators:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="nb">print</span><span class="p">(</span><span class="s">'hello'</span> <span class="o">&lt;</span> <span class="s">'help'</span><span class="p">)</span> <span class="c"># &gt;&gt;&gt; True</span>
+<span class="nb">print</span><span class="p">((</span><span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="o">&gt;</span> <span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>  <span class="c"># &gt;&gt;&gt; True </span>
+
+<span class="c"># a straight flush with 5 higher card has an higher rank compared to a straight flush with 3 higher card </span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>True
+True
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>LPD</strong>: The design choice of using <code>int</code> and <code>tuples</code> to describe ranks and hands sounds good because it leverages tuples comparision and built-in features in <code>max()</code>.</p>
+<h4 id="From-hands-to-card-ranks">From hands to card ranks<a class="anchor-link" href="/posts/norvig-on-programs-design/#From-hands-to-card-ranks">¶</a></h4><p>Let's see how we can add another piece to the puzzle by defining <code>card_ranks()</code>:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">mapping</span> <span class="o">=</span> <span class="p">{</span> <span class="s">'T'</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="s">'J'</span><span class="p">:</span> <span class="mi">11</span><span class="p">,</span> <span class="s">'Q'</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span> <span class="s">'K'</span><span class="p">:</span><span class="mi">13</span><span class="p">,</span> <span class="s">'A'</span><span class="p">:</span><span class="mi">14</span> <span class="p">}</span>
+
+<span class="k">def</span> <span class="nf">card_ranks</span><span class="p">(</span><span class="n">cards</span><span class="p">):</span>
+    <span class="s">"Return a list of the ranks, sorted with higher first (maps faces to integers also, to allow easier comparision)."</span>
+    <span class="n">ranks</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">r</span><span class="p">)</span> <span class="k">if</span> <span class="n">r</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">mapping</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span> <span class="k">else</span> <span class="n">mapping</span><span class="p">[</span><span class="n">r</span><span class="p">]</span> <span class="k">for</span> <span class="n">r</span><span class="p">,</span><span class="n">s</span> <span class="ow">in</span> <span class="n">cards</span><span class="p">]</span> 
+    <span class="n">ranks</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">reverse</span><span class="o">=</span><span class="k">True</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">ranks</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">card_ranks</span><span class="p">([</span><span class="s">'AC'</span><span class="p">,</span> <span class="s">'3D'</span><span class="p">,</span> <span class="s">'4S'</span><span class="p">,</span> <span class="s">'KH'</span><span class="p">]))</span> <span class="c"># should output [14, 13, 4, 3]</span>
+
+<span class="c"># Peter Norvig's way to define 'ranks' variable:</span>
+<span class="c"># ranks = ['--23456789TJQKA'.index(r) for r,s in cards]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Spot-a-point-in-hands">Spot a point in hands<a class="anchor-link" href="/posts/norvig-on-programs-design/#Spot-a-point-in-hands">¶</a></h4><p>Let's see how we can add other functions to the design by defining the methods to spot poker rankings into a ranked hand, stuff like <code>kind()</code>, <code>straight()</code>, <code>flush()</code>, <code>two_pair()</code>. First we add something to our <code>test()</code>:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="k">def</span> <span class="nf">test</span><span class="p">():</span>
+    <span class="s">"Test cases for the functions in poker program"</span>
+    <span class="n">sf</span> <span class="o">=</span> <span class="s">"6C 7C 8C 9C TC"</span><span class="o">.</span><span class="n">split</span><span class="p">()</span> <span class="c"># Straight Flush</span>
+    <span class="n">fk</span> <span class="o">=</span> <span class="s">"9D 9H 9S 9C 7D"</span><span class="o">.</span><span class="n">split</span><span class="p">()</span> <span class="c"># Four of a Kind</span>
+    <span class="n">fh</span> <span class="o">=</span> <span class="s">"TD TC TH 7C 7D"</span><span class="o">.</span><span class="n">split</span><span class="p">()</span> <span class="c"># Full House</span>
+    <span class="k">assert</span> <span class="n">poker</span><span class="p">([</span><span class="n">sf</span><span class="p">,</span> <span class="n">fk</span><span class="p">,</span> <span class="n">fh</span><span class="p">])</span> <span class="o">==</span> <span class="n">sf</span>
+    <span class="k">assert</span> <span class="n">poker</span><span class="p">([</span><span class="n">fk</span><span class="p">,</span> <span class="n">fh</span><span class="p">])</span> <span class="o">==</span> <span class="n">fk</span>
+    <span class="k">assert</span> <span class="n">poker</span><span class="p">([</span><span class="n">fh</span><span class="p">,</span> <span class="n">fh</span><span class="p">])</span> <span class="o">==</span> <span class="n">fh</span>
+    <span class="k">assert</span> <span class="n">poker</span><span class="p">([</span><span class="n">sf</span><span class="p">])</span> <span class="o">==</span> <span class="n">sf</span>
+    <span class="k">assert</span> <span class="n">poker</span><span class="p">([</span><span class="n">sf</span><span class="p">]</span> <span class="o">+</span> <span class="mi">99</span><span class="o">*</span><span class="p">[</span><span class="n">fh</span><span class="p">])</span> <span class="o">==</span> <span class="n">sf</span>
+    <span class="k">assert</span> <span class="n">hand_rank</span><span class="p">(</span><span class="n">sf</span><span class="p">)</span> <span class="o">==</span> <span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">hand_rank</span><span class="p">(</span><span class="n">fk</span><span class="p">)</span> <span class="o">==</span> <span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">hand_rank</span><span class="p">(</span><span class="n">fh</span><span class="p">)</span> <span class="o">==</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">card_ranks</span><span class="p">(</span><span class="n">sf</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+    <span class="k">assert</span> <span class="n">card_ranks</span><span class="p">(</span><span class="n">fk</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
+    <span class="k">assert</span> <span class="n">card_ranks</span><span class="p">(</span><span class="n">fh</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
+    <span class="k">assert</span> <span class="n">straight</span><span class="p">([</span><span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span> <span class="o">==</span> <span class="k">True</span>    <span class="c"># new</span>
+    <span class="k">assert</span> <span class="n">straight</span><span class="p">([</span><span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span> <span class="o">==</span> <span class="k">False</span>   <span class="c"># new</span>
+    <span class="k">assert</span> <span class="n">flush</span><span class="p">(</span><span class="n">sf</span><span class="p">)</span> <span class="o">==</span> <span class="k">True</span>        <span class="c"># new</span>
+    <span class="k">assert</span> <span class="n">flush</span><span class="p">(</span><span class="n">fk</span><span class="p">)</span> <span class="o">==</span> <span class="k">False</span>       <span class="c"># new</span>
+    <span class="k">return</span> <span class="s">'tests pass'</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [19]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="k">def</span> <span class="nf">straight</span><span class="p">(</span><span class="n">ranks</span><span class="p">):</span>
+    <span class="s">"Return True if the ordered ranks form a 5-card straight. NOTE: It takes a ranked hands as input"</span>
+    <span class="c"># Your code here.</span>
+    <span class="n">ranks</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">ranks</span><span class="p">,</span> <span class="n">reverse</span><span class="o">=</span><span class="k">True</span><span class="p">))</span>     <span class="c"># using iterator protocol</span>
+    <span class="n">value</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">ranks</span><span class="p">)</span>                           <span class="c"># store the current value of iterator </span>
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+        <span class="n">nxt</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">ranks</span><span class="p">)</span>                         <span class="c"># get the next element in the iteration</span>
+        <span class="k">if</span> <span class="n">value</span> <span class="o">-</span> <span class="n">nxt</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">:</span>                      <span class="c"># if the difference between consecutive elements is more than 1</span>
+            <span class="k">return</span> <span class="k">False</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="n">nxt</span>                               <span class="c"># the next become the current</span>
+    <span class="k">return</span> <span class="k">True</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">straight</span><span class="p">([</span><span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">straight</span><span class="p">([</span><span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">]))</span>
+
+<span class="c"># Peter Norvig's way:</span>
+<span class="c"># def straight(ranks):</span>
+<span class="c">#     return (max(ranks)-min(ranks) == 4) and len(set(ranks)) == 5</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>False
+True
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [31]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="k">def</span> <span class="nf">flush</span><span class="p">(</span><span class="n">hand</span><span class="p">):</span>
+    <span class="s">"Return True if all the cards have the same suit. NOTE: It takes an hand as input, not the ranked hands"</span>
+    <span class="n">suit</span> <span class="o">=</span> <span class="n">hand</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">n</span><span class="p">,</span> <span class="n">h</span> <span class="ow">in</span> <span class="n">hand</span><span class="p">:</span>                 <span class="c"># Note the string selection directly in the for loop </span>
+        <span class="k">if</span> <span class="n">h</span> <span class="o">!=</span> <span class="n">suit</span><span class="p">:</span> <span class="k">return</span> <span class="k">False</span>
+    <span class="k">return</span> <span class="k">True</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">flush</span><span class="p">(</span><span class="s">"6C 7C 8C 9C TC"</span><span class="o">.</span><span class="n">split</span><span class="p">()))</span>        <span class="c"># new</span>
+
+<span class="c"># Peter Norvig's way:</span>
+<span class="c"># def flush(hand):</span>
+<span class="c">#    suits = [s for r, s in hand]     # Note the string selection in the for loop </span>
+<span class="c">#    return len(set(suits)) == 1</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>False
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [51]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="k">def</span> <span class="nf">card_ranks</span><span class="p">(</span><span class="n">cards</span><span class="p">):</span>
+    <span class="s">"Return a list of the ranks, sorted with higher first (maps faces to integers also, to allow easier comparision)."</span>
+    <span class="n">mapping</span> <span class="o">=</span> <span class="p">{</span> <span class="s">'T'</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="s">'J'</span><span class="p">:</span> <span class="mi">11</span><span class="p">,</span> <span class="s">'Q'</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span> <span class="s">'K'</span><span class="p">:</span><span class="mi">13</span><span class="p">,</span> <span class="s">'A'</span><span class="p">:</span><span class="mi">14</span> <span class="p">}</span>
+    <span class="n">ranks</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">r</span><span class="p">)</span> <span class="k">if</span> <span class="n">r</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">mapping</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span> <span class="k">else</span> <span class="n">mapping</span><span class="p">[</span><span class="n">r</span><span class="p">]</span> <span class="k">for</span> <span class="n">r</span><span class="p">,</span><span class="n">s</span> <span class="ow">in</span> <span class="n">cards</span><span class="p">]</span> 
+    <span class="n">ranks</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">reverse</span><span class="o">=</span><span class="k">True</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">ranks</span>
+
+<span class="k">def</span> <span class="nf">test</span><span class="p">():</span>
+    <span class="s">"Test cases for spotting cards of the same kind in a hand."</span>
+    <span class="n">sf</span> <span class="o">=</span> <span class="s">"6C 7C 8C 9C TC"</span><span class="o">.</span><span class="n">split</span><span class="p">()</span> <span class="c"># Straight Flush</span>
+    <span class="n">fk</span> <span class="o">=</span> <span class="s">"9D 9H 9S 9C 7D"</span><span class="o">.</span><span class="n">split</span><span class="p">()</span> <span class="c"># Four of a Kind</span>
+    <span class="n">fh</span> <span class="o">=</span> <span class="s">"TD TC TH 7C 7D"</span><span class="o">.</span><span class="n">split</span><span class="p">()</span> <span class="c"># Full House</span>
+    <span class="n">tp</span> <span class="o">=</span> <span class="s">"TD TH 5C 8H 5H"</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+    <span class="n">fkranks</span> <span class="o">=</span> <span class="n">card_ranks</span><span class="p">(</span><span class="n">fk</span><span class="p">)</span>
+    <span class="n">tpranks</span> <span class="o">=</span> <span class="n">card_ranks</span><span class="p">(</span><span class="n">tp</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">kind</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">fkranks</span><span class="p">)</span> <span class="o">==</span> <span class="mi">9</span>                 <span class="c"># test for 4-of-a-kind</span>
+    <span class="k">assert</span> <span class="n">kind</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">fkranks</span><span class="p">)</span> <span class="o">==</span> <span class="k">None</span>              <span class="c"># test for 3-of-a-kind</span>
+    <span class="k">assert</span> <span class="n">kind</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">fkranks</span><span class="p">)</span> <span class="o">==</span> <span class="k">None</span>              <span class="c"># test for 2-of-a-kind</span>
+    <span class="k">assert</span> <span class="n">kind</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">fkranks</span><span class="p">)</span> <span class="o">==</span> <span class="mi">7</span>                 <span class="c"># test for higher card</span>
+    <span class="k">assert</span> <span class="n">two_pair</span><span class="p">(</span><span class="n">card_ranks</span><span class="p">(</span><span class="n">tp</span><span class="p">))</span> <span class="o">==</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>   <span class="c"># test for two_pair(), to check if there is a double 2-of-a-kind</span>
+    <span class="k">return</span> <span class="s">'tests pass'</span>
+
+<span class="k">def</span> <span class="nf">kind</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">ranks</span><span class="p">):</span>
+    <span class="sd">"""Return the first rank that this hand has exactly n of.</span>
+<span class="sd">    Return None if there is no n-of-a-kind in the hand."""</span>
+    <span class="n">setk</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">ranks</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">setk</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">ranks</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">item</span><span class="p">)</span> <span class="o">==</span> <span class="n">n</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">item</span>
+    <span class="k">return</span> <span class="k">None</span>
+
+<span class="k">def</span> <span class="nf">two_pair</span><span class="p">(</span><span class="n">ranks</span><span class="p">):</span>
+    <span class="sd">"""If there are two pair, return the two ranks as a</span>
+<span class="sd">    tuple: (highest, lowest); otherwise return None."""</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">ranks</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">ranks</span><span class="p">)):</span> <span class="k">return</span> <span class="k">None</span>  <span class="c"># all cards are different &gt;&gt; return None</span>
+    <span class="n">two_of</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">ranks</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">ranks</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">r</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span> <span class="ow">and</span> <span class="n">r</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">two_of</span><span class="p">:</span> <span class="n">two_of</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">two_of</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span> <span class="k">return</span> <span class="k">None</span>
+    <span class="k">return</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">two_of</span><span class="p">)</span>
+
+<span class="n">test</span><span class="p">()</span>
+
+<span class="c"># Peter Norvig's way:</span>
+<span class="c"># def kind(n, ranks):</span>
+<span class="c">#    for r in ranks:</span>
+<span class="c">#        if ranks.count(r) == n: return r</span>
+<span class="c">#    return None</span>
+<span class="c"># def two_pair(ranks):</span>
+<span class="c">#    pair = kind(2, ranks)</span>
+<span class="c">#    lowpair = kind(2, list(reversed(ranks)))</span>
+<span class="c">#    if pair and lowpair != pair:</span>
+<span class="c">#        retutn (pair, lowpair)</span>
+<span class="c">#    else:</span>
+<span class="c">#        return None</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[10, 5]
+</pre>
+</div>
+</div>
+
+<div class="output_area"><div class="prompt output_prompt">Out[51]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>'tests pass'</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Testing-is-never-enough">Testing is never enough<a class="anchor-link" href="/posts/norvig-on-programs-design/#Testing-is-never-enough">¶</a></h4><p>All the rankings are up and working, but we need <strong>more tests</strong> to handle edge cases and exceptions.</p>
+<p>This is only Lesson 1!</p>
+<ul>
+<li>How would you handle a straight with Axe low (A, 2, 3, 4, 5)?</li>
+<li>How would you handle ties?</li>
+<li>How would you deal poker hands to simulate a game?</li>
+</ul>
+<p>Complete course at <a href="https://www.udacity.com/course/design-of-computer-programs--cs212">Udacity</a> for free.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="c"># https://github.com/faif/python-patterns</span>
+<span class="c"># https://github.com/davidcorne/Design-Patterns-In-Python</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+    </div>
+  </div>
+</body>
+            </div> -->
+        </div>
         <div class="post">
             <h1 class="title"><a href="posts/interlude/">Interlude</a></h1>
             <div class="meta">
@@ -67,7 +657,6 @@ article: http://ogp.me/ns/article#
         Tags : 
            <li><a class="tag p-category" href="categories/decorators/" rel="tag">Decorators</a></li>
            <li><a class="tag p-category" href="categories/functional/" rel="tag">Functional</a></li>
-           <li><a class="tag p-category" href="categories/python/" rel="tag">Python</a></li>
         </ul>
 </div>
 
@@ -385,9 +974,11 @@ NOTE: instead of using <code>.__call__</code> to run the decorated function, "yo
                         <div itemprop="keywords" class="tags">
         <ul>
         Tags : 
+           <li><a class="tag p-category" href="categories/comprehensions/" rel="tag">Comprehensions</a></li>
            <li><a class="tag p-category" href="categories/decorators/" rel="tag">Decorators</a></li>
            <li><a class="tag p-category" href="categories/functional/" rel="tag">Functional</a></li>
-           <li><a class="tag p-category" href="categories/python/" rel="tag">Python</a></li>
+           <li><a class="tag p-category" href="categories/generators/" rel="tag">Generators</a></li>
+           <li><a class="tag p-category" href="categories/multi-dispatching/" rel="tag">Multi-Dispatching</a></li>
         </ul>
 </div>
 
@@ -1467,7 +2058,7 @@ func_wrapper
                 
             </div>
             <!-- <div class="body">
-                <body><p>This is a collection of all the interesting things I have found during my Python learning experience, collected in IPython notebooks. Hope it is for pyCoders like a good dip made from mashed chickpeas... Yeah, I love hummus (:</p></body>
+                <body><p>This is a collection of all the interesting things I have found during my Python learning experience, collected in IPython notebooks. These are basically only annotations and code, not real blogposts, so it's up to you to read, take some partial knowledge and structure the content. Hope it is for pyCoders like a good dip made from mashed chickpeas... Yeah, I love hummus (:</p></body>
             </div> -->
         </div>
     

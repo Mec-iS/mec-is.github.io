@@ -10,8 +10,20 @@
   <lastmod>2015-07-21</lastmod>
  </sitemap>
  <sitemap>
+  <loc>https://example.com/categories/cat_python.xml</loc>
+  <lastmod>2015-07-22</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://example.com/categories/cat_sparetime.xml</loc>
+  <lastmod>2015-07-22</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://example.com/categories/comprehensions.xml</loc>
+  <lastmod>2015-07-22</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>https://example.com/categories/decorators.xml</loc>
-  <lastmod>2015-07-21</lastmod>
+  <lastmod>2015-07-22</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://example.com/categories/design.xml</loc>
@@ -19,26 +31,38 @@
  </sitemap>
  <sitemap>
   <loc>https://example.com/categories/functional.xml</loc>
-  <lastmod>2015-07-21</lastmod>
+  <lastmod>2015-07-22</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://example.com/categories/generators.xml</loc>
+  <lastmod>2015-07-22</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://example.com/categories/multi-dispatching.xml</loc>
+  <lastmod>2015-07-22</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://example.com/categories/music.xml</loc>
-  <lastmod>2015-07-21</lastmod>
+  <lastmod>2015-07-22</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://example.com/categories/python.xml</loc>
   <lastmod>2015-07-21</lastmod>
  </sitemap>
  <sitemap>
+  <loc>https://example.com/categories/software-design.xml</loc>
+  <lastmod>2015-07-22</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>https://example.com/galleries/rss.xml</loc>
-  <lastmod>2015-07-21</lastmod>
+  <lastmod>2015-07-22</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://example.com/rss.xml</loc>
-  <lastmod>2015-07-21</lastmod>
+  <lastmod>2015-07-22</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://example.com/sitemap.xml</loc>
-  <lastmod>2015-07-21</lastmod>
+  <lastmod>2015-07-22</lastmod>
  </sitemap>
 </sitemapindex>
