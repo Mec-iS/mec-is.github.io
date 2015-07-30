@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>pyHummus (Testing)</title><link>http://mec-is.github.io/</link><description></description><atom:link type="application/rss+xml" rel="self" href="http://mec-is.github.io/categories/testing.xml"></atom:link><language>en</language><lastBuildDate>Wed, 29 Jul 2015 15:25:57 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>A Brainstorm Before Starting</title><link>http://mec-is.github.io/posts/a-brainstorm-before-starting/</link><dc:creator>lorenzogotuned</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>pyHummus (Testing)</title><link>http://mec-is.github.io/</link><description></description><atom:link type="application/rss+xml" rel="self" href="http://mec-is.github.io/categories/testing.xml"></atom:link><language>en</language><lastBuildDate>Thu, 30 Jul 2015 14:50:45 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>A Brainstorm Before Starting</title><link>http://mec-is.github.io/posts/a-brainstorm-before-starting/</link><dc:creator>lorenzogotuned</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
     &lt;div class="container" id="notebook-container"&gt;
 
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;
@@ -278,7 +278,7 @@ Namespaces are one honking great idea -- let's do more of those!
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h4 id="Mocking"&gt;Mocking&lt;a class="anchor-link" href="http://mec-is.github.io/posts/a-brainstorm-before-starting/#Mocking"&gt;¶&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;"Mock objects are simulated objects that mimic the behaviour of real application objects, but in particular and controlled ways. These are especially useful in creating environments that describe precisely the conditions for which you would like to testcode"&lt;/p&gt;
+&lt;h3 id="Mocking"&gt;Mocking&lt;a class="anchor-link" href="http://mec-is.github.io/posts/a-brainstorm-before-starting/#Mocking"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;"Mock objects are simulated objects that mimic the behaviour of real application objects, but in particular and controlled ways. These are especially useful in creating environments that describe precisely the conditions for which you would like to testcode"&lt;/p&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
@@ -407,7 +407,7 @@ hello world!
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h4 id="Scenarios"&gt;Scenarios&lt;a class="anchor-link" href="http://mec-is.github.io/posts/a-brainstorm-before-starting/#Scenarios"&gt;¶&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;"This package provides an easy way to run a class test against a different set of scenarios generated at run-time."
+&lt;h3 id="Scenarios"&gt;Scenarios&lt;a class="anchor-link" href="http://mec-is.github.io/posts/a-brainstorm-before-starting/#Scenarios"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;"This package provides an easy way to run a class test against a different set of scenarios generated at run-time."
 Same example as in Mocking, the test runs three times because three scenarios are defined:&lt;/p&gt;
 
 &lt;/div&gt;
@@ -459,7 +459,7 @@ Same example as in Mocking, the test runs three times because three scenarios ar
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h4 id="Profiling"&gt;Profiling&lt;a class="anchor-link" href="http://mec-is.github.io/posts/a-brainstorm-before-starting/#Profiling"&gt;¶&lt;/a&gt;&lt;/h4&gt;
+&lt;h3 id="Profiling"&gt;Profiling&lt;a class="anchor-link" href="http://mec-is.github.io/posts/a-brainstorm-before-starting/#Profiling"&gt;¶&lt;/a&gt;&lt;/h3&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -597,6 +597,138 @@ here
 &lt;/div&gt;
 &lt;/div&gt;
 
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h3 id="Disassemble"&gt;Disassemble&lt;a class="anchor-link" href="http://mec-is.github.io/posts/a-brainstorm-before-starting/#Disassemble"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [8]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;dis&lt;/span&gt;
+
+&lt;span class="n"&gt;dis&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;dis&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;lambda&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;sqrt&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;**&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;**&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+
+
+&lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
+&lt;div class="output_subarea output_stream output_stdout output_text"&gt;
+&lt;pre&gt;  3           0 LOAD_GLOBAL              0 (sqrt) 
+              3 LOAD_FAST                0 (x) 
+              6 LOAD_CONST               1 (2) 
+              9 BINARY_POWER         
+             10 LOAD_FAST                1 (y) 
+             13 LOAD_CONST               1 (2) 
+             16 BINARY_POWER         
+             17 BINARY_ADD           
+             18 CALL_FUNCTION            1 (1 positional, 0 keyword pair) 
+             21 RETURN_VALUE         
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h3 id="Memory-allocation"&gt;Memory allocation&lt;a class="anchor-link" href="http://mec-is.github.io/posts/a-brainstorm-before-starting/#Memory-allocation"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;A variable and its name have the same address in RAM.&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [11]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;id&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="nb"&gt;id&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+
+
+&lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
+&lt;div class="output_subarea output_stream output_stdout output_text"&gt;
+&lt;pre&gt;507103136
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="output_area"&gt;&lt;div class="prompt output_prompt"&gt;Out[11]:&lt;/div&gt;
+
+
+&lt;div class="output_text output_subarea output_execute_result"&gt;
+&lt;pre&gt;507103136&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [ ]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;
+&lt;span class="nb"&gt;id&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;507098816&lt;/span&gt;
+
+&lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;span class="nb"&gt;id&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;507098848&lt;/span&gt;
+&lt;span class="nb"&gt;id&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;507098848&lt;/span&gt;  &lt;span class="c"&gt;# 3 and the a+1=2 have the same address&lt;/span&gt;
+
+&lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;
+&lt;span class="nb"&gt;id&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;507098816&lt;/span&gt;  &lt;span class="c"&gt;# b has value 2, so it has the same address as a&lt;/span&gt;
+
+&lt;span class="c"&gt;### http://www.programiz.com/python-programming/namespace&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;This dynamic nature of name binding makes Python powerful.&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;

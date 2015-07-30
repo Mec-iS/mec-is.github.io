@@ -11,6 +11,7 @@ article: http://ogp.me/ns/article#
 <link href="assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
 <link rel="canonical" href="http://mec-is.github.io/">
+<link rel="icon" href="favicon.ico" sizes="16x16">
 <!--[if lt IE 9]><script src="/assets/js/html5.js"></script><![endif]--><style>
     div.input_prompt {
       display: none;
@@ -33,14 +34,76 @@ article: http://ogp.me/ns/article#
         </ul></section><section class="page-content"><div class="content" rel="main">
     <h1 style="letter-spacing: 3px;">pyHummus: Python Learning Dip</h1>
     <div class="post">
-        <i>DISCLAIMER:</i> This is a collection of all the interesting things I have found during my Python learning experience, collected into IPython notebooks. These are basically only annotations and code, not real blogposts: it's up to you to read, take some partial knowledge and structure the content for your own sake. I give you here the best ingredients I can, happy cooking! And eventually enjoy your meal! 
+        <p style="font-family: monospace; font-size: 90%;">This is a collection of all the interesting things I have found during my Python learning experience, collected into IPython notebooks. These are basically only annotations and code: it's up to you to read, take some partial knowledge and structure the content for your own sake. I give you here the <i>best ingredients I could find, happy cooking with Python!</i></p>
     </div>
-    <div style="min-height: 30px;">
+    <div style="min-height: 30px; margin-top: 10px;">
         <a href="https://twitter.com/share" class="twitter-share-button" data-via="lorenzogotuned" data-hashtags="Python, coding">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 </div>
     <div style="min-height: 30px;">
         <script type="text/javascript" src="http://platform.linkedin.com/in.js"></script><script type="in/share" data-counter="right"></script>
 </div>
+        <div class="post">
+            <h1 class="title"><a href="posts/networking-basics/">Networking Basics</a></h1>
+            <div class="meta">
+                <div class="authordate">
+                    <time class="timeago" datetime="2015-07-29T17:35:22+02:00">2015-07-29 17:35</time>
+</div>
+                <div class="stats">
+                    
+                </div>
+                        <div itemprop="keywords" class="tags">
+        <ul>
+        Tags : 
+           <li><a class="tag p-category" href="categories/devops/" rel="tag">DevOps</a></li>
+           <li><a class="tag p-category" href="categories/networking/" rel="tag">Networking</a></li>
+        </ul>
+</div>
+
+            </div>
+            <!-- <div class="body">
+                <div><p>Thanks to <a href="http://online.stanford.edu/course/introduction-computer-networking">Stanford Online</a><br></p>
+<h2>Networks Layers (ISO-OSI)</h2>
+<p><img alt="OSI 4 layers communication" src="/assets/images/posts/ISO-flow.png"></p>
+<h3>Network Layer</h3>
+<p>delivers packets to computers</p>
+<p><img alt="IP in OSI" src="/assets/images/posts/ISO-4.png"></p>
+<h4>Internet Protocol: characteristics</h4>
+<ul>
+<li>IP is a <em>datagram service</em>. Datagrams are self-contained: data and header (destination address + source address). Datagrams are delivered hop-by-hop (node-to-node, router-to-router). Routers have forwarding tables for different IP addresses, they know only the next hop for the datagram in the packet.</li>
+<li>IP is <em>unreliable</em>. Packets may get lost or dropped, or simply delivered out of sequence compared with the sending sequence.</li>
+<li>IP guarantees the <em>best effort</em>: packets will be dropped only when necessary (recovery these errors is on Transport, or Link).</li>
+<li>IP is <em>connectionless</em>. It maintains no knowledge at all of the state or sent datagrams </li>
+</ul>
+<h4>Internet Protocol: model and features</h4>
+<ul>
+<li>IP is a deliberately simple service, to work on different kinds of physical infrastructure</li>
+<li>IP tries to prevent pakets looping forever (usually due to updates in forwarding tables), using the hop-count field in the datagram (TTL field).</li>
+<li>IP limits packets size depending on the underlying Link (different networks have different max-size for packets, Network layers in routers fragments packets exceed max-size)</li>
+<li>IP uses checksums to check the header is not being corrupted and the destination is right</li>
+</ul>
+<h4>IPv4 Datagram</h4>
+<p><img alt="IP in OSI" src="/assets/images/posts/ipv4-datagram.png"><br></p>
+<p>You can experience the different hops walked by a packed with the <em>traceroute</em> command (<code>$&gt; traceroute -w 1 www.google.com</code>)</p>
+<h3>Transport Layer</h3>
+<p>delivers data to applications</p>
+<h4>TCP Byte Stream</h4>
+<p>Client and server establish a communication using the three-way-handshake (SYN &gt; SYN/ACK &gt; ACK):
+- client sends a "synchronize" (SYN)
+- server responds with a "synchronize/acknowledge" (SYN/ACK)
+- client responds with an "acknowledge" (ACK)</p>
+<p>Everybody can interact and learn about this behaviour with software like (Wireshark)[https://www.wireshark.org/]</p>
+<h3>Packets</h3>
+<p>Packet switching, Layering, Encapsulation</p>
+<h4>Packet Switching</h4>
+<p><em>Reminder</em>: packets are self-contained, independent chunks of communication. <br>
+Flow: a collection of datagrams belonging to the same end-to-end communication (e.g. a TCP connection).</p>
+<p>Packet switching principle in a common router: <em>Independently, for each arriving packet, pick its outgoing link. If the link is free, send it. Else, hold the packet for later.</em>. </p>
+<p>This principle has important consequences: 
+- simple packet forwarding: each router has its own forwarding table, that defines the next hop to the destination defined in the packet.
+- efficient sharing of links (lines between hops): many different packets from different users/connections can share the same link.
+- considering that data traffic is bursty. packet switching allows to use all available link capacity and to share link capacity. This is called <em>statistical multiplexing</em>.</p></div>
+            </div> -->
+        </div>
         <div class="post">
             <h1 class="title"><a href="posts/a-brainstorm-before-starting/">A Brainstorm Before Starting</a></h1>
             <div class="meta">
@@ -339,7 +402,7 @@ Namespaces are one honking great idea -- let's do more of those!
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Mocking">Mocking<a class="anchor-link" href="/posts/a-brainstorm-before-starting/#Mocking">¶</a></h4><p>"Mock objects are simulated objects that mimic the behaviour of real application objects, but in particular and controlled ways. These are especially useful in creating environments that describe precisely the conditions for which you would like to testcode"</p>
+<h3 id="Mocking">Mocking<a class="anchor-link" href="/posts/a-brainstorm-before-starting/#Mocking">¶</a></h3><p>"Mock objects are simulated objects that mimic the behaviour of real application objects, but in particular and controlled ways. These are especially useful in creating environments that describe precisely the conditions for which you would like to testcode"</p>
 
 </div>
 </div>
@@ -468,7 +531,7 @@ hello world!
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Scenarios">Scenarios<a class="anchor-link" href="/posts/a-brainstorm-before-starting/#Scenarios">¶</a></h4><p>"This package provides an easy way to run a class test against a different set of scenarios generated at run-time."
+<h3 id="Scenarios">Scenarios<a class="anchor-link" href="/posts/a-brainstorm-before-starting/#Scenarios">¶</a></h3><p>"This package provides an easy way to run a class test against a different set of scenarios generated at run-time."
 Same example as in Mocking, the test runs three times because three scenarios are defined:</p>
 
 </div>
@@ -520,7 +583,7 @@ Same example as in Mocking, the test runs three times because three scenarios ar
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Profiling">Profiling<a class="anchor-link" href="/posts/a-brainstorm-before-starting/#Profiling">¶</a></h4>
+<h3 id="Profiling">Profiling<a class="anchor-link" href="/posts/a-brainstorm-before-starting/#Profiling">¶</a></h3>
 </div>
 </div>
 </div>
@@ -658,6 +721,138 @@ here
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Disassemble">Disassemble<a class="anchor-link" href="/posts/a-brainstorm-before-starting/#Disassemble">¶</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="kn">import</span> <span class="nn">dis</span>
+
+<span class="n">dis</span><span class="o">.</span><span class="n">dis</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">x</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">y</span> <span class="o">**</span> <span class="mi">2</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>  3           0 LOAD_GLOBAL              0 (sqrt) 
+              3 LOAD_FAST                0 (x) 
+              6 LOAD_CONST               1 (2) 
+              9 BINARY_POWER         
+             10 LOAD_FAST                1 (y) 
+             13 LOAD_CONST               1 (2) 
+             16 BINARY_POWER         
+             17 BINARY_ADD           
+             18 CALL_FUNCTION            1 (1 positional, 0 keyword pair) 
+             21 RETURN_VALUE         
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Memory-allocation">Memory allocation<a class="anchor-link" href="/posts/a-brainstorm-before-starting/#Memory-allocation">¶</a></h3><p>A variable and its name have the same address in RAM.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">a</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+<span class="nb">id</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>507103136
+</pre>
+</div>
+</div>
+
+<div class="output_area"><div class="prompt output_prompt">Out[11]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>507103136</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">a</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="nb">id</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="o">&gt;&gt;</span> <span class="mi">507098816</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="n">a</span><span class="o">+</span><span class="mi">1</span>
+<span class="nb">id</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">507098848</span>
+<span class="nb">id</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">507098848</span>  <span class="c"># 3 and the a+1=2 have the same address</span>
+
+<span class="n">b</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="nb">id</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">507098816</span>  <span class="c"># b has value 2, so it has the same address as a</span>
+
+<span class="c">### http://www.programiz.com/python-programming/namespace</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This dynamic nature of name binding makes Python powerful.</p>
+
+</div>
+</div>
 </div>
     </div>
   </div>
@@ -2692,7 +2887,7 @@ func_wrapper
             </div>
             <!-- <div class="body">
                 <body><p>Hope it is for pyCoders like a good dip made from mashed chickpeas... Yeah, I love hummus (: 
-I give you here the best ingredients I can, happy cooking!</p></body>
+Share with me if you make some great repository from this material. </p></body>
             </div> -->
         </div>
     

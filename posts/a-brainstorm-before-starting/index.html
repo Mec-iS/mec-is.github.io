@@ -10,6 +10,7 @@ article: http://ogp.me/ns/article#
 <link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
 <link rel="canonical" href="http://mec-is.github.io/posts/a-brainstorm-before-starting/">
+<link rel="icon" href="../../favicon.ico" sizes="16x16">
 <!--[if lt IE 9]><script src="/assets/js/html5.js"></script><![endif]--><meta name="author" content="lorenzogotuned">
 <meta property="og:site_name" content="pyHummus">
 <meta property="og:title" content="A Brainstorm Before Starting">
@@ -377,8 +378,8 @@ Namespaces are one honking great idea -- let's do more of those!
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Mocking">Mocking<a class="anchor-link" href=".#Mocking">¶</a>
-</h4>
+<h3 id="Mocking">Mocking<a class="anchor-link" href=".#Mocking">¶</a>
+</h3>
 <p>"Mock objects are simulated objects that mimic the behaviour of real application objects, but in particular and controlled ways. These are especially useful in creating environments that describe precisely the conditions for which you would like to testcode"</p>
 
 </div>
@@ -510,8 +511,8 @@ hello world!
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Scenarios">Scenarios<a class="anchor-link" href=".#Scenarios">¶</a>
-</h4>
+<h3 id="Scenarios">Scenarios<a class="anchor-link" href=".#Scenarios">¶</a>
+</h3>
 <p>"This package provides an easy way to run a class test against a different set of scenarios generated at run-time."
 Same example as in Mocking, the test runs three times because three scenarios are defined:</p>
 
@@ -564,8 +565,8 @@ Same example as in Mocking, the test runs three times because three scenarios ar
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Profiling">Profiling<a class="anchor-link" href=".#Profiling">¶</a>
-</h4>
+<h3 id="Profiling">Profiling<a class="anchor-link" href=".#Profiling">¶</a>
+</h3>
 </div>
 </div>
 </div>
@@ -705,6 +706,144 @@ here
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Disassemble">Disassemble<a class="anchor-link" href=".#Disassemble">¶</a>
+</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="kn">import</span> <span class="nn">dis</span>
+
+<span class="n">dis</span><span class="o">.</span><span class="n">dis</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">x</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">y</span> <span class="o">**</span> <span class="mi">2</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>  3           0 LOAD_GLOBAL              0 (sqrt) 
+              3 LOAD_FAST                0 (x) 
+              6 LOAD_CONST               1 (2) 
+              9 BINARY_POWER         
+             10 LOAD_FAST                1 (y) 
+             13 LOAD_CONST               1 (2) 
+             16 BINARY_POWER         
+             17 BINARY_ADD           
+             18 CALL_FUNCTION            1 (1 positional, 0 keyword pair) 
+             21 RETURN_VALUE         
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Memory-allocation">Memory allocation<a class="anchor-link" href=".#Memory-allocation">¶</a>
+</h3>
+<p>A variable and its name have the same address in RAM.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">a</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+<span class="nb">id</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>507103136
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[11]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>507103136</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">a</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="nb">id</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="o">&gt;&gt;</span> <span class="mi">507098816</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="n">a</span><span class="o">+</span><span class="mi">1</span>
+<span class="nb">id</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">507098848</span>
+<span class="nb">id</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">507098848</span>  <span class="c"># 3 and the a+1=2 have the same address</span>
+
+<span class="n">b</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="nb">id</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">507098816</span>  <span class="c"># b has value 2, so it has the same address as a</span>
+
+<span class="c">### http://www.programiz.com/python-programming/namespace</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This dynamic nature of name binding makes Python powerful.</p>
+
+</div>
+</div>
+</div>
     </div>
   </div>
 
@@ -712,6 +851,9 @@ here
                 <ul class="pager hidden-print">
 <li class="previous">
                 <a href="../norvig-on-programs-design/" rel="prev" title="Norvig On Programs Design">Previous post</a>
+            </li>
+            <li class="next">
+                <a href="../networking-basics/" rel="next" title="Networking Basics">Next post</a>
             </li>
         </ul>
 </div>

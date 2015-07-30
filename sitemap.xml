@@ -7,7 +7,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>http://mec-is.github.io/</loc>
-  <lastmod>2015-07-22</lastmod>
+  <lastmod>2015-07-29</lastmod>
  </url>
  <url>
   <loc>http://mec-is.github.io/2015/</loc>
@@ -15,7 +15,7 @@
  </url>
  <url>
   <loc>http://mec-is.github.io/archive.html</loc>
-  <lastmod>2015-07-22</lastmod>
+  <lastmod>2015-07-29</lastmod>
  </url>
  <url>
   <loc>http://mec-is.github.io/categories/</loc>
@@ -24,6 +24,10 @@
  <url>
   <loc>http://mec-is.github.io/categories/cat_draft/</loc>
   <lastmod>2015-07-21</lastmod>
+ </url>
+ <url>
+  <loc>http://mec-is.github.io/categories/cat_internet/</loc>
+  <lastmod>2015-07-29</lastmod>
  </url>
  <url>
   <loc>http://mec-is.github.io/categories/cat_python/</loc>
@@ -46,6 +50,10 @@
   <lastmod>2015-07-21</lastmod>
  </url>
  <url>
+  <loc>http://mec-is.github.io/categories/devops/</loc>
+  <lastmod>2015-07-29</lastmod>
+ </url>
+ <url>
   <loc>http://mec-is.github.io/categories/functional/</loc>
   <lastmod>2015-07-22</lastmod>
  </url>
@@ -64,6 +72,10 @@
  <url>
   <loc>http://mec-is.github.io/categories/music/</loc>
   <lastmod>2015-07-22</lastmod>
+ </url>
+ <url>
+  <loc>http://mec-is.github.io/categories/networking/</loc>
+  <lastmod>2015-07-29</lastmod>
  </url>
  <url>
   <loc>http://mec-is.github.io/categories/python/</loc>
@@ -108,6 +120,10 @@
  <url>
   <loc>http://mec-is.github.io/posts/interlude/</loc>
   <lastmod>2015-07-22</lastmod>
+ </url>
+ <url>
+  <loc>http://mec-is.github.io/posts/networking-basics/</loc>
+  <lastmod>2015-07-29</lastmod>
  </url>
  <url>
   <loc>http://mec-is.github.io/posts/norvig-on-programs-design/</loc>
