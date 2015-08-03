@@ -19,7 +19,7 @@ article: http://ogp.me/ns/article#
 Networks Layers (ISO-OSI)
 
 Network Layer
-delivers packets to computers
+Delivers packets to computers
 
 Internet Protocol: characteristics
 
@@ -77,7 +77,7 @@ IP is a datagram service. Datagrams are self-contained: data and h">
 <h2>Networks Layers (ISO-OSI)</h2>
 <p><img alt="OSI 4 layers communication" src="../../assets/images/posts/ISO-flow.png"></p>
 <h3>Network Layer</h3>
-<p>delivers packets to computers</p>
+<p>Delivers packets to computers</p>
 <p><img alt="IP in OSI" src="../../assets/images/posts/ISO-4.png"></p>
 <h4>Internet Protocol: characteristics</h4>
 <ul>
@@ -94,26 +94,49 @@ IP is a datagram service. Datagrams are self-contained: data and h">
 <li>IP uses checksums to check the header is not being corrupted and the destination is right</li>
 </ul>
 <h4>IPv4 Datagram</h4>
-<p><img alt="IP in OSI" src="../../assets/images/posts/ipv4-datagram.png"><br></p>
+<p><img alt="IP in OSI" src="../../assets/images/posts/ipv4-datagram.png"><br><br></p>
 <p>You can experience the different hops walked by a packed with the <em>traceroute</em> command (<code>$&gt; traceroute -w 1 www.google.com</code>)</p>
 <h3>Transport Layer</h3>
 <p>delivers data to applications</p>
 <h4>TCP Byte Stream</h4>
-<p>Client and server establish a communication using the three-way-handshake (SYN &gt; SYN/ACK &gt; ACK):
-- client sends a "synchronize" (SYN)
-- server responds with a "synchronize/acknowledge" (SYN/ACK)
-- client responds with an "acknowledge" (ACK)</p>
+<p>Client and server establish a communication using the three-way-handshake (SYN &gt; SYN/ACK &gt; ACK):</p>
+<ul>
+<li>client sends a "synchronize" (SYN)</li>
+<li>server responds with a "synchronize/acknowledge" (SYN/ACK)</li>
+<li>client responds with an "acknowledge" (ACK)</li>
+</ul>
 <p>Everybody can interact and learn about this behaviour with software like (Wireshark)[https://www.wireshark.org/]</p>
 <h3>Packets</h3>
 <p>Packet switching, Layering, Encapsulation</p>
 <h4>Packet Switching</h4>
-<p><em>Reminder</em>: packets are self-contained, independent chunks of communication. <br>
-Flow: a collection of datagrams belonging to the same end-to-end communication (e.g. a TCP connection).</p>
-<p>Packet switching principle in a common router: <em>Independently, for each arriving packet, pick its outgoing link. If the link is free, send it. Else, hold the packet for later.</em>. </p>
-<p>This principle has important consequences: 
-- simple packet forwarding: each router has its own forwarding table, that defines the next hop to the destination defined in the packet.
-- efficient sharing of links (lines between hops): many different packets from different users/connections can share the same link.
-- considering that data traffic is bursty. packet switching allows to use all available link capacity and to share link capacity. This is called <em>statistical multiplexing</em>.</p>
+<p><em>Reminder</em>: packets are self-contained, independent chunks of communication. <br><br>
+Flow: a collection of datagrams belonging to the same end-to-end communication (e.g. a TCP connection).<br><br></p>
+<p>Packet switching principle in a common router: <em>Independently, for each arriving packet, pick its outgoing link. If the link is free, send it. Else, hold the packet for later.</em>. <br><br></p>
+<p>This principle has important consequences:</p>
+<ul>
+<li>simple packet forwarding: each router has its own forwarding table, that defines the next hop to the destination defined in the packet.</li>
+<li>efficient sharing of links (lines between hops): many different packets from different users/connections can share the same link.</li>
+<li>considering that data traffic is bursty. packet switching allows to use all available link capacity and to share link capacity. This is called <em>statistical multiplexing</em>.</li>
+</ul>
+<h4>Layering</h4>
+<p>Layering is a well-know structure for computer and network systems</p>
+<p><img alt="Layers" src="../../assets/images/posts/layering1.png"><br><br></p>
+<p>Example of use layering outside networks:<br><img alt="Layers in computer systems" src="../../assets/images/posts/layering2.png"><br><br></p>
+<p>Five main reason for Layering:</p>
+<ul>
+<li>Modularity: It breaks down the system into smaller, more manageable modules</li>
+<li>Well defined services: Each layer provides a well defined service to the layer above</li>
+<li>Reuse: A layer above can rely on all the hard work put in by others to implement the layers below</li>
+<li>Separation of concerns: Each layer can focus on its own job, without having to worry about how other layers do theirs </li>
+<li>Continous improvement (ex. cross-layer optimization)</li>
+<li>A 6th benefit is specific to layered communication systems, such as the Internet. That is peer to peer communications</li>
+</ul>
+<h4>Encapsulation</h4>
+<p>When you send a TCP segment, for example, it’s inside an IP packet, which is inside an Ethernet frame. Encapsulation is how this works. Encapsulation is the principle by which you organize information in packets so that you can maintain layers, yet let them share the contents of your packets.<br><br></p>
+<p>The way this works is each protocol layer has some headers, followed by its payload.<br><br></p>
+<p><em>Example</em>: <u>A HTTP GET request of a Wi-Fi Ethernet</u>: The HTTP GET request is the payload of a TCP segment. The TCP segment, encapsulating the HTTP GET, is the payload of an IP packet. This IP packet, encapsulating the TCP segment and the HTTP GET, is the payload of a Wi-Fi frame. <br><br></p>
+<p><img alt="Encapsulation of a HTTP GET" src="../../assets/images/posts/encapsulation1.png"><br><br><em>Image</em>: This is how WireShark represent the example above, each line represents the different layers' payloads (from bottom to top: the application layer with the HTTP request, the transport layer with the TCP segment, the IP layer with the datagram, and the Ethernet frame).<br><br></p>
+<p><em>Example</em>: <u>VPN</u>: HTTP inside TCP inside IP inside TLS inside TCP inside IP inside Ethernet. In VPN the initial payloads are encypted in TLS and sent to the VPN gateway, that can decrypt them and route the decypted payload inside the private network.</p>
 </div>
         </div>
                 <ul class="pager hidden-print">
