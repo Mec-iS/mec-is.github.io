@@ -7,7 +7,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>http://mec-is.github.io/</loc>
-  <lastmod>2015-07-29</lastmod>
+  <lastmod>2015-08-25</lastmod>
  </url>
  <url>
   <loc>http://mec-is.github.io/2015/</loc>
@@ -19,7 +19,11 @@
  </url>
  <url>
   <loc>http://mec-is.github.io/categories/</loc>
-  <lastmod>2015-07-29</lastmod>
+  <lastmod>2015-08-25</lastmod>
+ </url>
+ <url>
+  <loc>http://mec-is.github.io/categories/algorithms/</loc>
+  <lastmod>2015-08-25</lastmod>
  </url>
  <url>
   <loc>http://mec-is.github.io/categories/cat_draft/</loc>
@@ -28,6 +32,10 @@
  <url>
   <loc>http://mec-is.github.io/categories/cat_internet/</loc>
   <lastmod>2015-07-29</lastmod>
+ </url>
+ <url>
+  <loc>http://mec-is.github.io/categories/cat_operations/</loc>
+  <lastmod>2015-08-25</lastmod>
  </url>
  <url>
   <loc>http://mec-is.github.io/categories/cat_python/</loc>
@@ -40,6 +48,10 @@
  <url>
   <loc>http://mec-is.github.io/categories/comprehensions/</loc>
   <lastmod>2015-07-22</lastmod>
+ </url>
+ <url>
+  <loc>http://mec-is.github.io/categories/curl/</loc>
+  <lastmod>2015-08-25</lastmod>
  </url>
  <url>
   <loc>http://mec-is.github.io/categories/decorators/</loc>
@@ -94,6 +106,10 @@
   <lastmod>2015-07-22</lastmod>
  </url>
  <url>
+  <loc>http://mec-is.github.io/index-1.html</loc>
+  <lastmod>2015-08-25</lastmod>
+ </url>
+ <url>
   <loc>http://mec-is.github.io/listings/</loc>
   <lastmod>2015-07-22</lastmod>
  </url>
@@ -104,6 +120,14 @@
  <url>
   <loc>http://mec-is.github.io/posts/a-collection-of-ideas-and-chunks/</loc>
   <lastmod>2015-07-22</lastmod>
+ </url>
+ <url>
+  <loc>http://mec-is.github.io/posts/curl/</loc>
+  <lastmod>2015-08-25</lastmod>
+ </url>
+ <url>
+  <loc>http://mec-is.github.io/posts/devops-basics/</loc>
+  <lastmod>2015-08-25</lastmod>
  </url>
  <url>
   <loc>http://mec-is.github.io/posts/eckel-on-decorators/</loc>
@@ -128,5 +152,13 @@
  <url>
   <loc>http://mec-is.github.io/posts/norvig-on-programs-design/</loc>
   <lastmod>2015-07-22</lastmod>
+ </url>
+ <url>
+  <loc>http://mec-is.github.io/posts/shortest-path-generalization/</loc>
+  <lastmod>2015-08-25</lastmod>
+ </url>
+ <url>
+  <loc>http://mec-is.github.io/posts/untitled/</loc>
+  <lastmod>2015-08-25</lastmod>
  </url>
 </urlset>

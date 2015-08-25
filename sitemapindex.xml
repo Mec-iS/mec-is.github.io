@@ -6,16 +6,24 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
+  <loc>http://mec-is.github.io/categories/algorithms.xml</loc>
+  <lastmod>2015-08-25</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>http://mec-is.github.io/categories/cat_draft.xml</loc>
   <lastmod>2015-07-21</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://mec-is.github.io/categories/cat_internet.xml</loc>
-  <lastmod>2015-07-29</lastmod>
+  <lastmod>2015-08-25</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>http://mec-is.github.io/categories/cat_operations.xml</loc>
+  <lastmod>2015-08-25</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://mec-is.github.io/categories/cat_python.xml</loc>
-  <lastmod>2015-07-29</lastmod>
+  <lastmod>2015-08-25</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://mec-is.github.io/categories/cat_sparetime.xml</loc>
@@ -23,11 +31,15 @@
  </sitemap>
  <sitemap>
   <loc>http://mec-is.github.io/categories/comprehensions.xml</loc>
-  <lastmod>2015-07-22</lastmod>
+  <lastmod>2015-08-25</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>http://mec-is.github.io/categories/curl.xml</loc>
+  <lastmod>2015-08-25</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://mec-is.github.io/categories/decorators.xml</loc>
-  <lastmod>2015-07-22</lastmod>
+  <lastmod>2015-08-25</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://mec-is.github.io/categories/design.xml</loc>
@@ -35,23 +47,23 @@
  </sitemap>
  <sitemap>
   <loc>http://mec-is.github.io/categories/devops.xml</loc>
-  <lastmod>2015-07-29</lastmod>
+  <lastmod>2015-08-25</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://mec-is.github.io/categories/functional.xml</loc>
-  <lastmod>2015-07-22</lastmod>
+  <lastmod>2015-08-25</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://mec-is.github.io/categories/generators.xml</loc>
-  <lastmod>2015-07-22</lastmod>
+  <lastmod>2015-08-25</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://mec-is.github.io/categories/hacking.xml</loc>
-  <lastmod>2015-07-29</lastmod>
+  <lastmod>2015-07-30</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://mec-is.github.io/categories/multi-dispatching.xml</loc>
-  <lastmod>2015-07-22</lastmod>
+  <lastmod>2015-08-25</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://mec-is.github.io/categories/music.xml</loc>
@@ -59,7 +71,7 @@
  </sitemap>
  <sitemap>
   <loc>http://mec-is.github.io/categories/networking.xml</loc>
-  <lastmod>2015-07-29</lastmod>
+  <lastmod>2015-08-25</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://mec-is.github.io/categories/python.xml</loc>
@@ -71,7 +83,7 @@
  </sitemap>
  <sitemap>
   <loc>http://mec-is.github.io/categories/testing.xml</loc>
-  <lastmod>2015-07-29</lastmod>
+  <lastmod>2015-08-25</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://mec-is.github.io/galleries/rss.xml</loc>
@@ -79,10 +91,10 @@
  </sitemap>
  <sitemap>
   <loc>http://mec-is.github.io/rss.xml</loc>
-  <lastmod>2015-07-29</lastmod>
+  <lastmod>2015-08-25</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://mec-is.github.io/sitemap.xml</loc>
-  <lastmod>2015-07-29</lastmod>
+  <lastmod>2015-08-25</lastmod>
  </sitemap>
 </sitemapindex>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>pyHummus (Operations)</title><link>http://mec-is.github.io/</link><description></description><atom:link rel="self" href="http://mec-is.github.io/categories/cat_operations.xml" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Tue, 25 Aug 2015 15:27:39 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Devops Basics</title><link>http://mec-is.github.io/posts/devops-basics/</link><dc:creator>lorenzogotuned</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;img alt="DevOps - CAMS" src="http://mec-is.github.io/assets/images/posts/devops1.png"&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="DevOps - Packer: from VM to an artifact" src="http://mec-is.github.io/assets/images/posts/devops2.png"&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h3&gt;Additional resources&lt;/h3&gt;
+&lt;h4&gt;Notable Books&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://itrevolution.com/books/phoenix-project-devops-book/"&gt;The Phoenix Project&lt;/a&gt; (by Gene Kim, Kevin Behr, George Spafford) - A Novel About IT, DevOps, and Helping Your Business Win&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.amazon.com/Continuous-Delivery-Deployment-Automation-Addison-Wesley-ebook/dp/B003YMNVC0"&gt;Continuous Delivery: Reliable Software Releases through Build, Test, and Deployment Automation&lt;/a&gt; (by Jez Humble, David Farley) - The principles and technical practices that enable
+rapid, incremental delivery of high quality, valuable new functionality to users.&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.amazon.com/Lean-Enterprise-Performance-Organizations-Innovate/dp/1449368425"&gt;Lean Enterprise: How High Performance Organizations Innovate at Scale &lt;/a&gt; (by Jez Humble, Joanne Molesky, Barry O'Reilly) - Lean and Agile principles and patterns to help you move fast at scale - and demonstrates why and how to apply these methodologies throughout your organization, rather than with just one department or team.&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://smile.amazon.com/gp/product/B00CBM1WFC"&gt;Building a DevOps Culture&lt;/a&gt; (by Mandi Walls) - Free Kindle book - DevOps is as much about culture as it is about tools&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;Notable Presentations&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.youtube.com/watch?v=o7-IuYS0iSE"&gt;Short history of DevOps&lt;/a&gt; - video by Damon Edwards&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.youtube.com/watch?v=_DEToXsgrPc"&gt;Chef Style DevOps Kungfu&lt;/a&gt; - Adam Jacob Keynote - ChefConf 2015&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.youtube.com/watch?v=L1w2_AY82WY"&gt;Jez Humble Keynote&lt;/a&gt; - ChefConf 2015&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://vimeo.com/69079272"&gt;Leading the Horses to Drink&lt;/a&gt; - Support and Initiate a DevOps transformation by Damon Edwards.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;Additional DevOps related blogs and sites&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.chef.io/blog/2010/07/16/what-devops-means-to-me/"&gt;What DevOps means to me&lt;/a&gt; - an explanation of the components that make up CAMS (Culture, Automation, Measurement, Sharing), as well additional thoughts on what DevOps is and is not - by John Willis&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://dev2ops.org/"&gt;dev2ops&lt;/a&gt; - Delivering Change in a DevOps and Cloud World&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://theagileadmin.com/"&gt;the agile admin&lt;/a&gt; - blog on topics of DevOps, agile operations, cloud computing, infrastructure automation, Web security (especially AppSec), transparency, open source, monitoring, Web performance optimization, and more.&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://devopschecklist.com/"&gt;The DevOps checklist&lt;/a&gt; - This checklist is comprised of 48 items you can use to gauge the maturity of your software delivery competency, and form a baseline to measure your future improvements.&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.mattstratton.com/"&gt;DevOps – A Crash Course&lt;/a&gt; by Matt Stratton. A lot of links to good resources on DevOps topics.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;Additional Resources by Nutanix&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://stevenpoitras.com/the-nutanix-bible/"&gt;The Nutanix Bible&lt;/a&gt; - Brief History of datacenters, virtualisation, webscale architecture and an explanation of Nutanix hyperconverged architecture.&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://go.nutanix.com/webscale-101-hyper-converged-infrastructure-guide.html"&gt;Hyperconverged Infrastructure Guide&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.nutanix.com/company/education/"&gt;Nutanix Education portal&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.youtube.com/channel/UCJupSMWQRKQTvkb2CfkW0Eg"&gt;Nutanix Education YouTube channel&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://next.nutanix.com/"&gt;Nutanix NEXT community site&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;</description><category>DevOps</category><guid>http://mec-is.github.io/posts/devops-basics/</guid><pubDate>Wed, 05 Aug 2015 09:44:28 GMT</pubDate></item></channel></rss>

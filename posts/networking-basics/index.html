@@ -86,6 +86,8 @@ IP is a datagram service. Datagrams are self-contained: data and h">
 <li>IP guarantees the <em>best effort</em>: packets will be dropped only when necessary (recovery these errors is on Transport, or Link).</li>
 <li>IP is <em>connectionless</em>. It maintains no knowledge at all of the state or sent datagrams </li>
 </ul>
+<p><br><br>
+The IP layer does not guarantee that packets will be delivered in order or always follow the same path through the network. Each packet is individually routed. Often, all the packets in a flow <em>do</em> follow the same path. But the path may change if a link fails and packets follow a new path. Or if a router load-balances packets, packet-by-packet over several different output links.</p>
 <h4>Internet Protocol: model and features</h4>
 <ul>
 <li>IP is a deliberately simple service, to work on different kinds of physical infrastructure</li>
@@ -136,12 +138,27 @@ Flow: a collection of datagrams belonging to the same end-to-end communication (
 <p>The way this works is each protocol layer has some headers, followed by its payload.<br><br></p>
 <p><em>Example</em>: <u>A HTTP GET request of a Wi-Fi Ethernet</u>: The HTTP GET request is the payload of a TCP segment. The TCP segment, encapsulating the HTTP GET, is the payload of an IP packet. This IP packet, encapsulating the TCP segment and the HTTP GET, is the payload of a Wi-Fi frame. <br><br></p>
 <p><img alt="Encapsulation of a HTTP GET" src="../../assets/images/posts/encapsulation1.png"><br><br><em>Image</em>: This is how WireShark represent the example above, each line represents the different layers' payloads (from bottom to top: the application layer with the HTTP request, the transport layer with the TCP segment, the IP layer with the datagram, and the Ethernet frame).<br><br></p>
-<p><em>Example</em>: <u>VPN</u>: HTTP inside TCP inside IP inside TLS inside TCP inside IP inside Ethernet. In VPN the initial payloads are encypted in TLS and sent to the VPN gateway, that can decrypt them and route the decypted payload inside the private network.</p>
+<p><em>Example</em>: <u>VPN</u>: HTTP inside TCP inside IP inside TLS inside TCP inside IP inside Ethernet. In VPN the initial payloads are encypted in TLS and sent to the VPN gateway, that can decrypt them and route the decrypted payload inside the private network.</p>
+<h3>Addres Resolution Protocol (ARP)</h3>
+<p>ARP is the mechanism by which the network layer can discover the link address associated with a network address it’s directly connected to. It's the algorithm that maps IP packets address to link address for the next hop in the link for a given packet. An IP address is a network-level address. It describes a host, a unique destination at the network
+layer. A link address, in contrast, describes a particular network card, a unique device.</p>
+<p><img alt="Network and Link addresses" src="../../assets/images/posts/ARP1.png"><br><br></p>
+<p>The fact that link layer and network layer addresses are decoupled logically but coupled in practice is in some ways a historical artifact. When the Internet started, there were many link layers, and it wanted to be able to run on top of all of them. <br><br></p>
+<p>ARP is a simple request-reply protocol. Every node keeps a cache of mappings from IP addresses on its network to link layer addresses. The requester can ask for a network-link address map so that every node hears the request, a node sends requests to a link layer broadcast address.
+Every node in the network will hear the packet.
+Furthermore, ARP is structured so that it contains redundant data. The request contains
+the network and link layer address of the requestor. That way, when nodes hear a request
+(since it’s broadcast), they can insert or refresh a mapping in their cache.</p>
+<p><img alt="ARP packet" src="../../assets/images/posts/ARP2.png"><br><br></p>
+<p>If a node needs to send a packet to or through an IP address whose link layer address it does not have, it can request the address through ARP.</p>
 </div>
         </div>
                 <ul class="pager hidden-print">
 <li class="previous">
                 <a href="../a-brainstorm-before-starting/" rel="prev" title="A Brainstorm Before Starting">Previous post</a>
+            </li>
+            <li class="next">
+                <a href="../devops-basics/" rel="next" title="Devops Basics">Next post</a>
             </li>
         </ul>
 </div>

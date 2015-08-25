@@ -25,6 +25,9 @@ Delivers packets to computers
 - IP guarantees the *best effort*: packets will be dropped only when necessary (recovery these errors is on Transport, or Link).
 - IP is *connectionless*. It maintains no knowledge at all of the state or sent datagrams 
 
+<br/><br/>
+The IP layer does not guarantee that packets will be delivered in order or always follow the same path through the network. Each packet is individually routed. Often, all the packets in a flow *do* follow the same path. But the path may change if a link fails and packets follow a new path. Or if a router load-balances packets, packet-by-packet over several different output links.
+
 ### Internet Protocol: model and features
 
 - IP is a deliberately simple service, to work on different kinds of physical infrastructure
@@ -96,4 +99,23 @@ The way this works is each protocol layer has some headers, followed by its payl
 ![Encapsulation of a HTTP GET](/assets/images/posts/encapsulation1.png)<br/><br/>
 *Image*: This is how WireShark represent the example above, each line represents the different layers' payloads (from bottom to top: the application layer with the HTTP request, the transport layer with the TCP segment, the IP layer with the datagram, and the Ethernet frame).<br/><br/>
 
-*Example*: <u>VPN</u>: HTTP inside TCP inside IP inside TLS inside TCP inside IP inside Ethernet. In VPN the initial payloads are encypted in TLS and sent to the VPN gateway, that can decrypt them and route the decypted payload inside the private network.
+*Example*: <u>VPN</u>: HTTP inside TCP inside IP inside TLS inside TCP inside IP inside Ethernet. In VPN the initial payloads are encypted in TLS and sent to the VPN gateway, that can decrypt them and route the decrypted payload inside the private network.
+
+## Addres Resolution Protocol (ARP)
+
+ARP is the mechanism by which the network layer can discover the link address associated with a network address it’s directly connected to. It's the algorithm that maps IP packets address to link address for the next hop in the link for a given packet. An IP address is a network-level address. It describes a host, a unique destination at the network
+layer. A link address, in contrast, describes a particular network card, a unique device.
+
+![Network and Link addresses](/assets/images/posts/ARP1.png)<br/><br/>
+
+The fact that link layer and network layer addresses are decoupled logically but coupled in practice is in some ways a historical artifact. When the Internet started, there were many link layers, and it wanted to be able to run on top of all of them. <br/><br/>
+
+ARP is a simple request-reply protocol. Every node keeps a cache of mappings from IP addresses on its network to link layer addresses. The requester can ask for a network-link address map so that every node hears the request, a node sends requests to a link layer broadcast address.
+Every node in the network will hear the packet.
+Furthermore, ARP is structured so that it contains redundant data. The request contains
+the network and link layer address of the requestor. That way, when nodes hear a request
+(since it’s broadcast), they can insert or refresh a mapping in their cache.
+
+![ARP packet](/assets/images/posts/ARP2.png)<br/><br/>
+
+If a node needs to send a packet to or through an IP address whose link layer address it does not have, it can request the address through ARP.
