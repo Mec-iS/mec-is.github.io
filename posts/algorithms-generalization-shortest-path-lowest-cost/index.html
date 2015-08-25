@@ -6,33 +6,25 @@ article: http://ogp.me/ns/article#
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
-<title>Untitled | pyHummus</title>
+<title>Algorithms Generalization Shortest Path Lowest Cost | pyHummus</title>
 <link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
-<link rel="canonical" href="http://mec-is.github.io/posts/untitled/">
+<link rel="canonical" href="http://mec-is.github.io/posts/algorithms-generalization-shortest-path-lowest-cost/">
 <link rel="icon" href="../../favicon.ico" sizes="16x16">
 <!--[if lt IE 9]><script src="/assets/js/html5.js"></script><![endif]--><meta name="author" content="lorenzogotuned">
 <meta property="og:site_name" content="pyHummus">
-<meta property="og:title" content="Untitled">
-<meta property="og:url" content="http://mec-is.github.io/posts/untitled/">
-<meta property="og:description" content="Using frontier's analysis:
+<meta property="og:title" content="Algorithms Generalization Shortest Path Lowest Cost">
+<meta property="og:url" content="http://mec-is.github.io/posts/algorithms-generalization-shortest-path-lowest-cost/">
+<meta property="og:description" content="Shortest Path Search
+Basic concepts: starting state, successor function, goal
 
-
-
-
-
-
-In [ ]:
-
-    
+Using frontier's analysis:
 ####### Missionaries and Cannibals Game #######
 # By Peter Norvig, Udacity.com CS212 Lesson 4
-# -----------------
-# User Instructions
-# 
-# Write a functi">
+">
 <meta property="og:type" content="article">
-<meta property="article:published_time" content="2015-08-25T00:00:00+02:00">
+<meta property="article:published_time" content="2015-08-25T17:32:36+02:00">
+<meta property="article:tag" content="Algorithms">
 </head>
 <body>
     <section class="social"><ul>
@@ -49,14 +41,14 @@ In [ ]:
 </li>
         </ul></section><section class="page-content"><div class="content" rel="main">
     <div class="post">
-        <h1 class="p-name entry-title" itemprop="headline name">Untitled</h1>
+        <h1 class="p-name entry-title" itemprop="headline name">Algorithms Generalization Shortest Path Lowest Cost</h1>
 
         <div class="meta">
             <div class="authordate">
-                <time class="timeago" datetime="2015-08-25T00:00:00+02:00">2015-08-25 00:00</time>
+                <time class="timeago" datetime="2015-08-25T17:32:36+02:00">2015-08-25 17:32</time>
             
                       |  
-        <a href="index.ipynb" id="sourcelink">Source</a>
+        <a href="index.md" id="sourcelink">Source</a>
 
             <!-- Twitter Share Button -->
             <div style="min-height: 30px;">
@@ -67,29 +59,21 @@ In [ ]:
 </div>
             <!-- -->
             </div>
-            
+                    <div itemprop="keywords" class="tags">
+        <ul>
+        Tags : 
+           <li><a class="tag p-category" href="../../categories/algorithms/" rel="tag">Algorithms</a></li>
+        </ul>
+</div>
+
         </div>
         <div class="body">
-            <div tabindex="-1" id="notebook" class="border-box-sizing">
-    <div class="container" id="notebook-container">
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="../../assets/images/posts/shortest-path-search.png" alt="Components for Shortest-Path-Search"></p>
+            <div>
+<h3>Shortest Path Search</h3>
+<h4>Basic concepts: starting state, successor function, goal</h4>
+<p><img alt="Components for Shortest-Path-Search" src="../../assets/images/posts/shortest-path-search.png"></p>
 <p>Using frontier's analysis:</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="c">####### Missionaries and Cannibals Game #######</span>
+<pre class="code literal-block"><span class="c">####### Missionaries and Cannibals Game #######</span>
 <span class="c"># By Peter Norvig, Udacity.com CS212 Lesson 4</span>
 <span class="c"># -----------------</span>
 <span class="c"># User Instructions</span>
@@ -99,9 +83,9 @@ In [ ]:
 <span class="c"># and change the arguments in the return statement's call to the </span>
 <span class="c"># shortest_path_search function.</span>
 
-<span class="k">def</span> <span class="nf">mc_problem2</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">goal</span><span class="o">=</span><span class="k">None</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">mc_problem2</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">goal</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
     <span class="c"># your code here if necessary</span>
-    <span class="k">if</span> <span class="n">goal</span> <span class="ow">is</span> <span class="k">None</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">goal</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
         <span class="n">goal</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">+</span> <span class="n">start</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span>
     <span class="k">return</span> <span class="n">shortest_path_search</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">csuccessors</span><span class="p">,</span> <span class="n">all_gone</span><span class="p">)</span> <span class="c"># &lt;== insert arguments here</span>
 
@@ -176,37 +160,129 @@ In [ ]:
                              <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">)]</span>
     <span class="k">return</span> <span class="s">'tests pass'</span>
 
-<span class="nb">print</span> <span class="n">test</span><span class="p">()</span>
-</pre></div>
+<span class="k">print</span> <span class="n">test</span><span class="p">()</span> 
+</pre>
 
-</div>
-</div>
-</div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre> 
-</pre></div>
+<h3>Lowest Cost Search</h3>
+<h5>Each movement on the path can have different cost</h5>
+<p><img alt="Components for Lowest-Cost-Search" src="../../assets/images/posts/lowest-cost-search.png"></p>
+<pre class="code literal-block"><span class="c">####### The Bridge Game #######</span>
+<span class="c"># By Peter Norvig, Udacity.com CS212 Lesson 4</span>
+<span class="c"># -----------------</span>
+<span class="c"># User Instructions</span>
+<span class="c"># </span>
+<span class="c"># In this problem, you will generalize the bridge problem </span>
+<span class="c"># by writing a function bridge_problem3, that makes a call</span>
+<span class="c"># to lowest_cost_search.</span>
 
-</div>
-</div>
-</div>
+<span class="k">def</span> <span class="nf">bridge_problem3</span><span class="p">(</span><span class="n">here</span><span class="p">):</span>
+    <span class="sd">"""Find the fastest (least elapsed time) path to </span>
+<span class="sd">    the goal in the bridge problem."""</span>
+    <span class="n">start</span> <span class="o">=</span> <span class="p">(</span><span class="nb">frozenset</span><span class="p">(</span><span class="n">here</span><span class="p">)</span> <span class="o">|</span> <span class="nb">frozenset</span><span class="p">([</span><span class="s">'light'</span><span class="p">]),</span> <span class="nb">frozenset</span><span class="p">())</span>
+    <span class="k">return</span> <span class="n">lowest_cost_search</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">bsuccessor2</span><span class="p">,</span> <span class="n">all_over</span><span class="p">,</span> <span class="n">bcost</span><span class="p">)</span>
 
-</div>
-    </div>
-  </div>
+<span class="k">def</span> <span class="nf">all_over</span><span class="p">(</span><span class="n">state</span><span class="p">):</span>
+    <span class="n">here</span><span class="p">,</span> <span class="n">there</span> <span class="o">=</span> <span class="n">state</span>
+    <span class="k">return</span> <span class="ow">not</span> <span class="n">here</span> <span class="ow">or</span> <span class="n">here</span> <span class="o">==</span> <span class="nb">set</span><span class="p">([</span><span class="s">'light'</span><span class="p">])</span> 
 
+<span class="k">def</span> <span class="nf">lowest_cost_search</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">successors</span><span class="p">,</span> <span class="n">is_goal</span><span class="p">,</span> <span class="n">action_cost</span><span class="p">):</span>
+    <span class="sd">"""Return the lowest cost path, starting from start state,</span>
+<span class="sd">    and considering successors(state) =&gt; {state:action,...},</span>
+<span class="sd">    that ends in a state for which is_goal(state) is true,</span>
+<span class="sd">    where the cost of a path is the sum of action costs,</span>
+<span class="sd">    which are given by action_cost(action)."""</span>
+    <span class="n">Fail</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">explored</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span> <span class="c"># set of states we have visited</span>
+    <span class="n">frontier</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="n">start</span><span class="p">]</span> <span class="p">]</span> <span class="c"># ordered list of paths we have blazed</span>
+    <span class="k">while</span> <span class="n">frontier</span><span class="p">:</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="n">frontier</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">state1</span> <span class="o">=</span> <span class="n">final_state</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">is_goal</span><span class="p">(</span><span class="n">state1</span><span class="p">):</span>  
+            <span class="k">return</span> <span class="n">path</span>
+        <span class="n">explored</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">state1</span><span class="p">)</span>
+        <span class="n">pcost</span> <span class="o">=</span> <span class="n">path_cost</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+        <span class="k">for</span> <span class="p">(</span><span class="n">state</span><span class="p">,</span> <span class="n">action</span><span class="p">)</span> <span class="ow">in</span> <span class="n">successors</span><span class="p">(</span><span class="n">state1</span><span class="p">)</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">state</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">explored</span><span class="p">:</span>
+                <span class="n">total_cost</span> <span class="o">=</span> <span class="n">pcost</span> <span class="o">+</span> <span class="n">action_cost</span><span class="p">(</span><span class="n">action</span><span class="p">)</span>
+                <span class="n">path2</span> <span class="o">=</span> <span class="n">path</span> <span class="o">+</span> <span class="p">[(</span><span class="n">action</span><span class="p">,</span> <span class="n">total_cost</span><span class="p">),</span> <span class="n">state</span><span class="p">]</span>
+                <span class="n">add_to_frontier</span><span class="p">(</span><span class="n">frontier</span><span class="p">,</span> <span class="n">path2</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">Fail</span>
+
+<span class="k">def</span> <span class="nf">final_state</span><span class="p">(</span><span class="n">path</span><span class="p">):</span> <span class="k">return</span> <span class="n">path</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">path_cost</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+    <span class="s">"The total cost of a path (which is stored in a tuple with the final action)."</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">path</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">action</span><span class="p">,</span> <span class="n">total_cost</span> <span class="o">=</span> <span class="n">path</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">total_cost</span>
+
+<span class="k">def</span> <span class="nf">add_to_frontier</span><span class="p">(</span><span class="n">frontier</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
+    <span class="s">"Add path to frontier, replacing costlier path if there is one."</span>
+    <span class="c"># (This could be done more efficiently.)</span>
+    <span class="c"># Find if there is an old path to the final state of this path.</span>
+    <span class="n">old</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">p</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">frontier</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">final_state</span><span class="p">(</span><span class="n">p</span><span class="p">)</span> <span class="o">==</span> <span class="n">final_state</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+            <span class="n">old</span> <span class="o">=</span> <span class="n">i</span>
+            <span class="k">break</span>
+    <span class="k">if</span> <span class="n">old</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span> <span class="ow">and</span> <span class="n">path_cost</span><span class="p">(</span><span class="n">frontier</span><span class="p">[</span><span class="n">old</span><span class="p">])</span> <span class="o">&lt;</span> <span class="n">path_cost</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+        <span class="k">return</span> <span class="c"># Old path was better; do nothing</span>
+    <span class="k">elif</span> <span class="n">old</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">del</span> <span class="n">frontier</span><span class="p">[</span><span class="n">old</span><span class="p">]</span> <span class="c"># Old path was worse; delete it</span>
+    <span class="c">## Now add the new path and re-sort</span>
+    <span class="n">frontier</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+    <span class="n">frontier</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="n">path_cost</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">bsuccessors2</span><span class="p">(</span><span class="n">state</span><span class="p">):</span>
+    <span class="sd">"""Return a dict of {state:action} pairs.  A state is a (here, there) tuple,</span>
+<span class="sd">    where here and there are frozensets of people (indicated by their times) and/or</span>
+<span class="sd">    the light."""</span>
+    <span class="n">here</span><span class="p">,</span> <span class="n">there</span> <span class="o">=</span> <span class="n">state</span>
+    <span class="k">if</span> <span class="s">'light'</span> <span class="ow">in</span> <span class="n">here</span><span class="p">:</span>
+        <span class="k">return</span> <span class="nb">dict</span><span class="p">(((</span><span class="n">here</span>  <span class="o">-</span> <span class="nb">frozenset</span><span class="p">([</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="s">'light'</span><span class="p">]),</span>
+                      <span class="n">there</span> <span class="o">|</span> <span class="nb">frozenset</span><span class="p">([</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="s">'light'</span><span class="p">])),</span>
+                     <span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="s">'-&gt;'</span><span class="p">))</span>
+                    <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">here</span> <span class="k">if</span> <span class="n">a</span> <span class="ow">is</span> <span class="ow">not</span> <span class="s">'light'</span>
+                    <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">here</span> <span class="k">if</span> <span class="n">b</span> <span class="ow">is</span> <span class="ow">not</span> <span class="s">'light'</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="nb">dict</span><span class="p">(((</span><span class="n">here</span>  <span class="o">|</span> <span class="nb">frozenset</span><span class="p">([</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="s">'light'</span><span class="p">]),</span>
+                      <span class="n">there</span> <span class="o">-</span> <span class="nb">frozenset</span><span class="p">([</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="s">'light'</span><span class="p">])),</span>
+                     <span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="s">'&lt;-'</span><span class="p">))</span>
+                    <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">there</span> <span class="k">if</span> <span class="n">a</span> <span class="ow">is</span> <span class="ow">not</span> <span class="s">'light'</span>
+                    <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">there</span> <span class="k">if</span> <span class="n">b</span> <span class="ow">is</span> <span class="ow">not</span> <span class="s">'light'</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">bcost</span><span class="p">(</span><span class="n">action</span><span class="p">):</span>
+    <span class="s">"Returns the cost (a number) of an action in the bridge problem."</span>
+    <span class="c"># An action is an (a, b, arrow) tuple; a and b are times; arrow is a string</span>
+    <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">arrow</span> <span class="o">=</span> <span class="n">action</span>
+    <span class="k">return</span> <span class="nb">max</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">test</span><span class="p">():</span>
+    <span class="n">here</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
+    <span class="k">assert</span> <span class="n">bridge_problem3</span><span class="p">(</span><span class="n">here</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span>
+            <span class="p">(</span><span class="nb">frozenset</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s">'light'</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">]),</span> <span class="nb">frozenset</span><span class="p">([])),</span> 
+            <span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s">'-&gt;'</span><span class="p">),</span> <span class="mi">2</span><span class="p">),</span> 
+            <span class="p">(</span><span class="nb">frozenset</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">]),</span> <span class="nb">frozenset</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s">'light'</span><span class="p">])),</span> 
+            <span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s">'&lt;-'</span><span class="p">),</span> <span class="mi">4</span><span class="p">),</span> 
+            <span class="p">(</span><span class="nb">frozenset</span><span class="p">([</span><span class="s">'light'</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">]),</span> <span class="nb">frozenset</span><span class="p">([</span><span class="mi">1</span><span class="p">])),</span> 
+            <span class="p">((</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="s">'-&gt;'</span><span class="p">),</span> <span class="mi">14</span><span class="p">),</span> 
+            <span class="p">(</span><span class="nb">frozenset</span><span class="p">([</span><span class="mi">2</span><span class="p">]),</span> <span class="nb">frozenset</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="s">'light'</span><span class="p">])),</span> 
+            <span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s">'&lt;-'</span><span class="p">),</span> <span class="mi">15</span><span class="p">),</span> 
+            <span class="p">(</span><span class="nb">frozenset</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s">'light'</span><span class="p">]),</span> <span class="nb">frozenset</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">])),</span> 
+            <span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s">'-&gt;'</span><span class="p">),</span> <span class="mi">17</span><span class="p">),</span> 
+            <span class="p">(</span><span class="nb">frozenset</span><span class="p">([]),</span> <span class="nb">frozenset</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="s">'light'</span><span class="p">]))]</span>
+    <span class="k">return</span> <span class="s">'test passes'</span>
+
+<span class="k">print</span> <span class="n">test</span><span class="p">()</span>
+</pre>
+</div>
         </div>
                 <ul class="pager hidden-print">
 <li class="previous">
                 <a href="../curl/" rel="prev" title="Curl">Previous post</a>
-            </li>
-            <li class="next">
-                <a href="../shortest-path-generalization/" rel="next" title="Shortest Path Generalization">Next post</a>
             </li>
         </ul>
 </div>

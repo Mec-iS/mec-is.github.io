@@ -122,6 +122,10 @@
   <lastmod>2015-07-22</lastmod>
  </url>
  <url>
+  <loc>http://mec-is.github.io/posts/algorithms-generalization-shortest-path-lowest-cost/</loc>
+  <lastmod>2015-08-25</lastmod>
+ </url>
+ <url>
   <loc>http://mec-is.github.io/posts/curl/</loc>
   <lastmod>2015-08-25</lastmod>
  </url>
@@ -152,13 +156,5 @@
  <url>
   <loc>http://mec-is.github.io/posts/norvig-on-programs-design/</loc>
   <lastmod>2015-07-22</lastmod>
- </url>
- <url>
-  <loc>http://mec-is.github.io/posts/shortest-path-generalization/</loc>
-  <lastmod>2015-08-25</lastmod>
- </url>
- <url>
-  <loc>http://mec-is.github.io/posts/untitled/</loc>
-  <lastmod>2015-08-25</lastmod>
  </url>
 </urlset>

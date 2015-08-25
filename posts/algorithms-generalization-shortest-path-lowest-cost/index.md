@@ -1,7 +1,7 @@
 <!-- 
-.. title: Algorithms Generalization: Shortest-Path-Search, Lowest-Cost-Search
-.. slug: shortest-path-generalization
-.. date: 2015-08-25 17:02:17 UTC+02:00
+.. title: Algorithms Generalization: shortest path, lowest cost
+.. slug: algorithms-generalization-shortest-path-lowest-cost
+.. date: 2015-08-25 17:32:36 UTC+02:00
 .. tags: Algorithms
 .. category: Python
 .. link: 
@@ -9,11 +9,15 @@
 .. type: text
 -->
 
+## Shortest Path Search
+
+### Basic concepts: starting state, successor function, goal 
+
 ![Components for Shortest-Path-Search](/assets/images/posts/shortest-path-search.png)
 
 Using frontier's analysis:
 
-```
+```python
 ####### Missionaries and Cannibals Game #######
 # By Peter Norvig, Udacity.com CS212 Lesson 4
 # -----------------
@@ -104,9 +108,13 @@ def test():
 print test() 
 ```
 
+## Lowest Cost Search
+
+#### Each movement on the path can have different cost
+
 ![Components for Lowest-Cost-Search](/assets/images/posts/lowest-cost-search.png)
 
-```
+```python
 ####### The Bridge Game #######
 # By Peter Norvig, Udacity.com CS212 Lesson 4
 # -----------------
