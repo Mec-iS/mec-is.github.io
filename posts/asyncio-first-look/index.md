@@ -12,7 +12,7 @@
 ## Definitions
 
 * A Good explanation for [_Threading_](http://stackoverflow.com/a/5201906/2536357)
-* "A piece of code is _thread-safe_ if it functions correctly during simultaneous execution by multiple threads." (Wikipedia). For a discussion about how thread-safety is strictly connected to scenarios in which specific objectives are pursued(accessing/modifying nutable data-structures for example), see [here](http://blogs.msdn.com/b/ericlippert/archive/2009/10/19/what-is-this-thing-you-call-thread-safe.aspx). The author sustains that thread-safety is strictly related to the tasks the software performs. It can be, or not, thread-safe related to what it is performing, and not just generically thread-safe.  
+* "A piece of code is _thread-safe_ if it functions correctly during simultaneous execution by multiple threads." (Wikipedia). For a discussion about how thread-safety is strictly connected to scenarios in which specific objectives are pursued (accessing/modifying mutable data-structures for example), see [here](http://blogs.msdn.com/b/ericlippert/archive/2009/10/19/what-is-this-thing-you-call-thread-safe.aspx). The author sustains that thread-safety is strictly related to the tasks the software performs. It can be, or not, thread-safe related to what it is performing, and not just generically thread-safe.  
 
 ### Generators coroutines and async coroutines
 _from [Pydocs](https://docs.python.org/3/library/asyncio-task.html)_:
